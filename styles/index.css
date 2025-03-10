@@ -1,0 +1,361 @@
+/* styles/index.css */
+:root {
+    --color-dark-blue-bg: #003377;
+    --color-light-grey-bg: #f5f7fa;
+    --color-white: #ffffff;
+    --color-accent: #f68d23;
+    --color-cse: #d9edf7;
+    --color-wdd: #f2dede;
+    --color-heading-bg: #328ec8;
+}
+
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-light-grey-bg);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-dark-blue-bg);
+    font-family: 'Playfair Display', serif;
+    color: var(--color-white);
+    padding: 1rem 2rem;
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+header img {
+    width: 70px;
+    height: auto;
+    border-radius: 15px;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: var(--color-white);
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--color-white);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li {
+    display: inline;
+    font-weight: bold;
+    font-style: italic;
+}
+
+nav ul li a {
+    color: var(--color-white);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: var(--color-white);
+    color: var(--color-dark-blue-bg);
+    border-radius: 5px;
+}
+
+main {
+    padding: 10px;
+}
+
+h1 {
+    color: var(--color-dark-blue-bg);
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+
+h2 {
+    color: var(--color-white);
+    text-align: center;
+    background-color: var(--color-heading-bg);
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 10px 0;
+    /* Extend background color to the top */
+    position: relative;
+    top: -20px;
+    left: -20px;
+    width: calc(100% + 40px);
+    /* Extend background color to the left and right */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+section {
+    margin-bottom: 20px;
+    background-color: var(--color-white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    /* Adding shadow for better aesthetics */
+}
+
+/* Add grid styling for sections */
+.grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+.grid-container section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+figcaption {
+    font-style: italic;
+    font-size: 0.9rem;
+    text-align: center;
+    padding-top: 20px;
+    color: var(--color-dark-blue-bg);
+}
+
+/* Increase space between list items */
+section ul {
+    padding: 40px;
+    line-height: 2rem;
+}
+
+section ul li {
+    margin-bottom: 10px;
+}
+
+.course {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 45%;
+    display: inline-block;
+    margin-right: 2%;
+}
+
+.course.cse {
+    background-color: var(--color-cse);
+}
+
+.course.wdd {
+    background-color: var(--color-wdd);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+button {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    /* Smooth transition for hover effect */
+}
+
+button:hover {
+    background-color: var(--color-heading-bg);
+    /* Adding hover effect for buttons */
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    font-family: 'Playfair Display', serif;
+    background-color: var(--color-dark-blue-bg);
+    color: var(--color-white);
+    padding: 1rem;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer p#lastUpdated {
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+footer p#currentyear {
+    font-size: 1.1rem;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        gap: 0.5rem;
+    }
+
+    section ul {
+        padding: 20px;
+    }
+
+    .course {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    header img {
+        width: 50px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul li {
+        font-weight: normal;
+        font-size: smaller;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        padding: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 0 5px;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    header img {
+        width: 30px;
+    }
+
+    header h1 {
+        font-size: 1.3rem;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+        cursor: pointer;
+        font-size: 2rem;
+        color: var(--color-white);
+    }
+
+    nav ul {
+        display: none;
+        position: absolute;
+        right: 0;
+        background-color: rgba(14, 64, 138, 0.64);
+        /* Transparent background */
+        flex-direction: column;
+        width: 120px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+        top: 60px;
+    }
+
+    nav ul.active {
+        display: flex;
+        /* Show the menu when active */
+    }
+
+    nav ul li {
+        text-align: center;
+        padding: 10px;
+        border-bottom: 1px solid var(--color-dark-blue-bg);
+    }
+
+
+    nav ul li a {
+        display: block;
+        padding: 10px 20px;
+        color: var(--color-white);
+    }
+
+    nav ul li a:hover {
+        background-color: var(--color-accent);
+        color: var(--color-dark-blue-bg);
+    }
+
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        background: none;
+        margin: 0;
+        padding: 40px 0;
+        color: var(--color-dark-blue-bg);
+    }
+
+    section {
+        padding: 10px;
+        background: none;
+        border: none;
+    }
+
+    .course {
+        padding: 5px;
+        background: none;
+    }
+
+    .button-container {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+    }
+}
