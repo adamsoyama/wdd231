@@ -1,0 +1,18 @@
+{
+    "familyName": "Oyama",
+    "date": "2025-03-18",
+    "familyNumber": 2,
+    "visitedBishopric": true,
+    "familyMembers": [
+        {
+            "name": "Adams Oyama",
+            "gender": "Male",
+            "birthdate": "1991-03-11"
+        },
+        {
+            "name": "Dora Adams",
+            "gender": "Female",
+            "birthdate": "1995-11-05"
+        }
+    ]
+}
