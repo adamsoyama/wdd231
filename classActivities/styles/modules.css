@@ -1,0 +1,87 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0fff4; /* Light green background */
+    text-align: center;
+    padding: 20px;
+}
+
+/* Headings */
+h1 {
+    color: #065f46; /* Dark Green */
+}
+
+h2 {
+    color: #10b981; /* Medium Green */
+}
+
+/* Input Field */
+input {
+    padding: 8px;
+    border: 2px solid #047857; /* Green border */
+    border-radius: 5px;
+    margin: 10px;
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 5px;
+    color: white;
+}
+
+/* Enroll Button - Green */
+.enroll {
+    background-color: #059669; /* Green */
+}
+
+.enroll:hover {
+    background-color: #047857; /* Darker Green */
+}
+
+/* Drop Button - Orange */
+.drop {
+    background-color: #ea580c; /* Orange */
+}
+
+.drop:hover {
+    background-color: #c2410c; /* Darker Orange */
+}
+
+/* Table Styling */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th, td {
+    border: 1px solid #065f46; /* Green border */
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #10b981; /* Medium Green */
+    color: white;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #d1fae5; /* Light Green */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #a7f3d0; /* Lighter Green */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    table {
+        width: 100%;
+    }
+}

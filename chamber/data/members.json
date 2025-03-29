@@ -1,0 +1,65 @@
+[
+    {
+        "name": "Calabar Steel Mills",
+        "tagline": "Building the Future of Steel",
+        "email": "info@calabarsteel.com",
+        "phone": "+234 810 555 1234",
+        "url": "https://calabarsteel.com",
+        "level": 3,
+        "logo": "images/steel-mills.png"
+    },
+    {
+        "name": "Cross River Breweries",
+        "tagline": "Brewed with Passion",
+        "email": "contact@crossriverbrewery.com",
+        "phone": "+234 810 555 5678",
+        "url": "https://crossriverbrewery.com",
+        "level": 2,
+        "logo": "images/breweriespng.png"
+    },
+    {
+        "name": "Calabar Flour Mills",
+        "tagline": "Flourishing the Future",
+        "email": "support@calabarflourmills.com",
+        "phone": "+234 810 555 8765",
+        "url": "https://calabarflourmills.com",
+        "level": 3,
+        "logo": "images/flour-mill.png"
+    },
+    {
+        "name": "National Bank of Calabar",
+        "tagline": "Your Trusted Banking Partner",
+        "email": "info@nbcalabar.com",
+        "phone": "+234 810 555 4321",
+        "url": "https://nbcalabar.com",
+        "level": 1,
+        "logo": "images/bank.png"
+    },
+    {
+        "name": "Cross River Tourism Ltd.",
+        "tagline": "Exploring the Beauty of Cross River",
+        "email": "tourism@crossrivertourism.com",
+        "phone": "+234 810 555 6789",
+        "url": "https://crossrivertourism.com",
+        "level": 2,
+        "logo": "images/toursim.png"
+    },
+    {
+        "name": "Calabar Cement Works",
+        "tagline": "Strengthening Infrastructure",
+        "email": "info@calabarcements.com",
+        "phone": "+234 810 555 9876",
+        "url": "https://calabarcements.com",
+        "level": 3,
+        "logo": "images/cement.png"
+    },
+    {
+        "name": "Maritime Transport Services",
+        "tagline": "Connecting the Coast",
+        "email": "info@maritimetransport.com",
+        "phone": "+234 810 555 6543",
+        "url": "https://maritimetransport.com",
+        "level": 1,
+        "logo": "images/maritime.png"
+    }
+]

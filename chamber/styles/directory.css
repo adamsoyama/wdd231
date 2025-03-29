@@ -1,0 +1,309 @@
+/* General Reset and Body Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff; /* White background for the body */
+    color: #333; /* Dark gray text color for readability */
+    line-height: 1.6;
+}
+
+/* Header Section */
+header {
+    background-color: #003377; /* Darkest blue for header background */
+    color: #fff; /* White text for header */
+    padding: 20px;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header .logo img {
+    width: 70px;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Navigation Styles */
+nav ul {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    list-style: none;
+    margin-top: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav a.active,
+nav a:hover {
+    color: #FFD700; /* Gold color for hover/active state */
+    transition: color 0.3s ease;
+}
+
+/* Main Content */
+main {
+    padding: 30px;
+}
+
+/* View Toggle Section */
+#view-toggle {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#view-toggle button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #003377; /* Dark blue button */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+#view-toggle button:hover {
+    background-color: #FFD700; /* Hover state with gold */
+    color: #003377; /* Text turns to dark blue */
+}
+
+/* Member List Styles */
+#member-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 members per row on larger screens */
+    gap: 20px; /* Space between grid items */
+    margin-top: 20px;
+}
+
+/* Member Card Styles (Grid View) */
+#member-list .member-card {
+    background-color: #fff; /* White background for member card */
+    border: 2px solid #003377; /* Dark blue border around the member card */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Soft shadow for the card */
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text */
+    margin-bottom: 20px; /* Space between cards */
+}
+
+/* Member Card Hover Effect */
+#member-list .member-card:hover {
+    transform: translateY(-5px); /* Slight elevation on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+}
+
+/* Member Logo */
+#member-list .member-card img {
+    align-items: center;
+    width: 80px; /* Adjust logo size */
+    height: auto;
+    margin-bottom: 15px; /* Space below the logo */
+}
+
+/* Member Details */
+#member-list .member-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    color: #003377; /* Dark blue for the name */
+    margin-bottom: 10px;
+}
+
+#member-list .member-card p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #333; /* Gray text for details */
+}
+
+/* List View Styles */
+#member-list.list-view {
+    display: block; /* Stack all items in list view */
+}
+
+#member-list.list-view .member-card {
+    display: block; /* Stack cards in list view */
+    margin-bottom: 20px; /* Space between each list item */
+}
+
+/* List View - Table Layout */
+#member-list.table-view {
+    display: table; /* Table layout */
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#member-list.table-view .member {
+    display: table-row; /* Each member will be a table row */
+}
+
+#member-list.table-view .member div {
+    display: table-cell; /* Each div inside a member is a table cell */
+    padding: 10px;
+    border: 1px solid #003377; /* Light border around cells */
+    text-align: left;
+}
+
+#member-list.table-view .member div:first-child {
+    font-weight: bold; /* Make the first column bold (representing keys) */
+}
+
+#member-list.table-view .member:hover {
+    background-color: #f4f4f4; /* Hover effect for table rows */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #003377; /* Dark blue background for footer */
+    color: #fff;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer .address, footer .developer-info {
+    flex: 1;
+    margin: 20px;
+}
+
+footer .social-media {
+    flex: 1;
+    margin: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    line-height: 2.0;
+}
+
+footer p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8rem;
+    line-height: 2.0;
+    font-style: italic;
+    color: #fff;
+}
+
+.social-media a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.social-media a:hover {
+    color: #FFD700; /* Hover color */
+}
+
+.social-icon {
+    width: 20px; /* Adjust size as needed */
+    height: auto;
+}
+
+
+footer .developer-info p {
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+
+/* Max-width 320px (Very Small Screens) */
+@media (max-width: 320px) {
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #member-list {
+        grid-template-columns: 1fr; /* 1 member per row on very small screens */
+    }
+
+    #member-list .member-card {
+        padding: 15px;
+    }
+}
+
+/* Max-width 480px (Mobile Devices) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    #member-list {
+        grid-template-columns: repeat(2, 1fr); /* 2 members per row on mobile */
+    }
+}
+
+/* Max-width 768px (Tablets) */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #member-list {
+        grid-template-columns: repeat(2, 1fr); /* 2 members per row on medium screens */
+    }
+
+    #member-list.tableview {
+        display: block;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer .address, footer .social-media, footer .developer-info {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .social-media {
+        justify-content: space-around; /* Space icons evenly across small screens */
+    }
+}
+
+/* Max-width 1024px (Larger Tablets / Small Laptops) */
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    #member-list {
+        grid-template-columns: repeat(3, 1fr); /* 3 members per row on larger screens */
+    }
+
+    #member-list .member-card {
+        padding: 20px;
+    }
+}
