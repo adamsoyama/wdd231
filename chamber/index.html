@@ -1,68 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your City Chamber of Commerce</title>
-  <link rel="stylesheet" href="styles/styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Calabar Chamber of Commerce</title>
+    <meta name="description" content="Welcome to the Calabar Chamber of Commerce Home Page">
+    <meta name="author" content="Adams Oyama">
+    <meta name="keywords" content="Calabar Chamber of Commerce, Business, Calabar, Nigeria">
+    <meta property="og:title" content="Chamber Home Page">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/ccci-logo.png">
+    <meta property="og:url" content="https://adamsoyama.github.io/wdd231/chamber/index.html">
+    <meta property="og:description" content="Connecting commerce and community in Calabar">
+    <link rel="canonical" href="https://adamsoyama.github.io/wdd231/chamber/index.html">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="images/ccci-favicon.png">
+    <link rel="stylesheet" href="styles/index.css">
+    <script src="scripts/index.js" defer></script>
 </head>
+
 <body>
-  <header>
-    <div class="logo">🌟 Chamber of Commerce</div>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Directory</a></li>
-        <li><a href="#">Events</a></li>
-        <li><a href="#">Join</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <div class="logo">
+            <img src="images/ccci-logo.png" alt="Calabar Chamber of Commerce Logo" width="70" loading="lazy">
+            <h1>Calabar Chamber of Commerce and Industry</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <section class="hero">
-    <h1>Welcome to [City Name] Chamber of Commerce</h1>
-    <p>Supporting Local Businesses & Building Stronger Communities</p>
-    <a href="#" class="btn">Join Us Today</a>
-  </section>
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Empowering Businesses, Building Calabar</h2>
+                <p>Connect. Grow. Succeed.</p>
+                <a href="join.html" class="cta">Join the Chamber</a>
+            </div>
+        </section>
 
-  <section class="events-news">
-    <h2>What's Happening</h2>
-    <div class="cards">
-      <!-- event/news cards here -->
-    </div>
-  </section>
+        <section class="home-sections">
+            <section class="info-section">
+                <div class="events" id="events">
+                    <h2>Events</h2>
+                    <!-- JS will populate this -->
+                </div>
 
-  <section class="about">
-    <h2>About Us</h2>
-    <p>The [City Name] Chamber of Commerce connects local businesses, promotes growth, and provides resources for success in our community.</p>
-  </section>
+                <div class="current-weather" id="weather">
+                    <h2>Current Weather</h2>
+                    <p><strong>Temp:</strong> <span id="temp"></span>°C</p>
+                    <p><strong>Conditions:</strong> <span id="description"></span></p>
+                    <p><strong>High:</strong> <span id="high"></span>°C | <strong>Low:</strong> <span id="low"></span>°C
+                    </p>
+                    <p><strong>Humidity:</strong> <span id="humidity"></span>%</p>
+                    <p><strong>Sunrise:</strong> <span id="sunrise"></span></p>
+                    <p><strong>Sunset:</strong> <span id="sunset"></span></p>
+                </div>
 
-  <section class="spotlight">
-    <h2>Business Spotlight</h2>
-    <div class="business-card">
-      <img src="images/business.jpg" alt="Featured Business">
-      <h3>Local Business Name</h3>
-      <p>Helping the community grow with passion and innovation.</p>
-    </div>
-  </section>
+                <div class="forecast" id="forecast">
+                    <h2>3-Day Forecast</h2>
+                    <ul>
+                        <li>Tomorrow: <span id="day1"></span></li>
+                        <li>Day After: <span id="day2"></span></li>
+                        <li>Third Day: <span id="day3"></span></li>
+                    </ul>
+                </div>
+            </section>
 
-  <section class="membership-cta">
-    <h2>Become a Member</h2>
-    <p>Access resources, events, and networking opportunities.</p>
-    <a href="#" class="btn">Apply Now</a>
-  </section>
+            <section class="spotlights" id="spotlights">
+                <!-- Spotlight cards go here -->
+            </section>
+        </section>
+    </main>
 
-  <section class="weather-summary">
-    <h2>Local Weather</h2>
-    <div id="weather">
-      <!-- dynamic weather widget or API data here -->
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 [City Name] Chamber of Commerce</p>
-    <p><a href="#">Privacy Policy</a> | <a href="#">Contact</a></p>
-  </footer>
+    <footer>
+        <div class="address">
+            <h3>Calabar Chamber of Commerce and Industry</h3>
+            <p>156 Ndidem Isong Raod, Calabar, Nigeria</p>
+            <p><a href="mailto:info@ccci.org">info@ccci.org</a></p>
+            <p>(+234) 813 578 0989</p>
+        </div>
+        <div class="social-media">
+            <a href="https://www.facebook.com/ccci.org" target="_blank" aria-label="Facebook">
+                <img src="images/facebook.png" alt="Facebook" class="social-icon">
+            </a>
+            <a href="https://x.com/ccci_org" target="_blank" aria-label="X">
+                <img src="images/x.png" alt="X" class="social-icon">
+            </a>
+            <a href="https://youtube.com/ccci.org" target="_blank" aria-label="YouTube">
+                <img src="images/youtube.png" alt="YouTube" class="social-icon">
+            </a>
+        </div>
+        <div class="developer-info">
+            <h3>WDD231 Class Project</h3>
+            <p>Adams Oyama - WDD 231</p>
+            <p>&copy; <span id="year"></span> &bull; Calabar Chamber of Commerce and Industry</p>
+            <p>Last Modified: <span id="last-modified"></span></p>
+        </div>
+    </footer>
 </body>
+
 </html>

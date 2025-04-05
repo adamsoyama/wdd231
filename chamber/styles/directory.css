@@ -185,7 +185,7 @@ footer a {
     color: #fff;
 }
 
-.social-media nav {
+.social-media {
     display: flex;
     gap: 30px;
     align-items: center;
