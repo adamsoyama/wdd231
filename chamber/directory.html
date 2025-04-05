@@ -13,9 +13,8 @@
     <meta property="og:image" content="images/ccci-logo.png">
     <meta property="og:url" content="https://adamsoyama.github.io/wdd231/chamber/directory.html">
     <meta property="og:description" content="Calabar Chamber of Commerce">
-    <link rel="canonical" href="https://adamsoyama.github.io/wdd231/chamber/directrory.html">
+    <link rel="canonical" href="https://adamsoyama.github.io/wdd231/chamber/directory.html">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <!-- Google Fonts preconnect and stylesheet links -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link
@@ -45,42 +44,42 @@
         <section id="view-toggle">
             <div>
                 <h2>Members</h2>
-                <button id="grid-view">Grid View</button>
-                <button id="list-view">List View</button>
+                <button id="grid-view" aria-label="Switch to grid view">🔲 Grid View</button>
+                <button id="list-view" aria-label="Switch to list view">📋 List View</button>
             </div>
         </section>
 
-        <section id="member-list"></section>
+        <section id="member-list" class="grid-view" aria-live="polite"></section>
     </main>
 
     <footer>
         <div class="address">
             <h3>Calabar Chamber of Commerce and Industry</h3>
             <p>156 Ndidem Isong Raod, Calabar, Nigeria</p>
-            <p>info@ccci.org</p>
+            <p><a href="mailto:info@ccci.org">info@ccci.org</a></p>
             <p>(+234) 813 578 0989</p>
         </div>
         <div class="social-media">
             <h3>Follow Us</h3>
-            <a href="https://www.facebook.com/ccci.org" target="_blank">
-                <img src="images/facebook.png" alt="Facebook" class="social-icon">
-            </a>
-            <a href="https://x.com/ccci_org" target="_blank">
-                <img src="images/x.png" alt="X" class="social-icon">
-            </a>
-            <a href="https://youtube.com/ccci.org" target="_blank">
-                <img src="images/youtube.png" alt="YouTube" class="social-icon">
-            </a>
+            <nav><a href="https://www.facebook.com/ccci.org" target="_blank" aria-label="Facebook">
+                    <img src="images/facebook.png" alt="Facebook" class="social-icon">
+                </a>
+                <a href="https://x.com/ccci_org" target="_blank" aria-label="X">
+                    <img src="images/x.png" alt="X" class="social-icon">
+                </a>
+                <a href="https://youtube.com/ccci.org" target="_blank" aria-label="YouTube">
+                    <img src="images/youtube.png" alt="YouTube" class="social-icon">
+                </a>
+            </nav>
         </div>
 
         <div class="developer-info">
-            <h3>WDD231 class Project</h3>
+            <h3>WDD231 Class Project</h3>
             <p>Adams Oyama - WDD 231</p>
             <p>&copy; <span id="year"></span> &bull; Calabar Chamber of Commerce and Industry</p>
             <p>Last Modified: <span id="last-modified"></span></p>
         </div>
     </footer>
-
 </body>
 
 </html>

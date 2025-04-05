@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const gridView = document.getElementById('grid-view');
     const listView = document.getElementById('list-view');
 
-    let membersData = []; // Declare a variable to store the members data
+    let membersData = [];
 
     // Footer Dynamic Content
     yearSpan.textContent = new Date().getFullYear();
@@ -15,29 +15,31 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch('data/members.json')
         .then(response => response.json())
         .then(data => {
-            membersData = data;  // Store the fetched data in membersData
-            displayMembers(membersData); // Display members initially
+            membersData = data;
+            displayMembers(membersData);
+        })
+        .catch(error => {
+            console.error('Error fetching member data:', error);
+            memberList.innerHTML = '<p>Error loading member directory. Please try again later.</p>';
         });
 
     // Display Members function
     function displayMembers(members) {
-        memberList.innerHTML = ''; // Clear any existing content
+        memberList.innerHTML = '';
 
         members.forEach(member => {
             const card = document.createElement('div');
-            card.classList.add('member-card'); // Assign the member card class
+            card.classList.add('member-card');
 
             if (memberList.classList.contains('table-view')) {
-                // Table view structure
                 card.innerHTML = `
-                    <div>Name</div><div>${member.name}</div>
-                    <div>Tagline</div><div>${member.tagline}</div>
-                    <div>Email</div><div><a href="mailto:${member.email}">${member.email}</a></div>
-                    <div>Phone</div><div>${member.phone}</div>
-                    <div>Website</div><div><a href="${member.url}" target="_blank">${member.url}</a></div>
+                    <div>${member.name}</div>
+                    <div>${member.tagline}</div>
+                    <div><a href="mailto:${member.email}">${member.email}</a></div>
+                    <div>${member.phone}</div>
+                    <div><a href="${member.url}" target="_blank">${member.url}</a></div>
                 `;
             } else {
-                // Grid view structure
                 card.innerHTML = `
                     <div class="logo">
                         <img src="${member.logo}" alt="${member.name} logo">
@@ -56,14 +58,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Toggle Views
     gridView.addEventListener('click', () => {
-        memberList.classList.remove('table-view'); // Remove table view class
-        memberList.classList.add('grid-view'); // Add grid view class
-        displayMembers(membersData); // Re-render the members in grid view
+        memberList.classList.remove('table-view');
+        memberList.classList.add('grid-view');
+        displayMembers(membersData);
+        setActiveButton(gridView);
     });
 
     listView.addEventListener('click', () => {
-        memberList.classList.add('table-view'); // Add table view class
-        memberList.classList.remove('grid-view'); // Remove grid view class
-        displayMembers(membersData); // Re-render the members in list view
+        memberList.classList.remove('grid-view');
+        memberList.classList.add('table-view');
+        displayMembers(membersData);
+        setActiveButton(listView);
     });
+
+    function setActiveButton(activeBtn) {
+        [gridView, listView].forEach(btn => btn.classList.remove('active'));
+        activeBtn.classList.add('active');
+    }
 });
