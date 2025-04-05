@@ -1,0 +1,58 @@
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #e6f0ff, #ffffff);
+    color: #003366;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #003366;
+    margin-bottom: 1rem;
+  }
+  
+  main {
+    background-color: #ffffffcc;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 51, 102, 0.2);
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  main p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  figcaption {
+    font-style: italic;
+    color: #004080;
+    margin-top: 0.5rem;
+  }
+  
+  footer {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
