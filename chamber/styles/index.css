@@ -130,7 +130,7 @@ main {
     
 }
 
-.home-sections h1 {
+.home-sections h2 {
     font-family: 'Playfair Display', serif;
     color: #003377;
     text-align: center;
@@ -275,7 +275,7 @@ footer a {
         font-size: 0.9rem;
     }
 
-    .home-sections h1 {
+    .home-sections h2 {
         font-size: 1rem;
     }
 
