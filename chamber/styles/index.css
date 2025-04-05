@@ -127,9 +127,14 @@ main {
 
 .home-sections {
     margin-top: 20px;
-    ;
+    
 }
 
+.home-sections h1 {
+    font-family: 'Playfair Display', serif;
+    color: #003377;
+    text-align: center;
+}
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -258,16 +263,8 @@ footer a {
         font-size: 14px;
     }
 
-    header .logo img {
-        width: 30px;
-    }
-
-    header h1 {
-        font-size: 0.8rem;
-    }
-
     .hero h2 {
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
 
     .hero p {
@@ -276,6 +273,10 @@ footer a {
 
     .hero a.cta {
         font-size: 0.9rem;
+    }
+
+    .home-sections h1 {
+        font-size: 1rem;
     }
 
     .spotlight h3 {
@@ -289,6 +290,10 @@ footer a {
 
     header .logo img {
         width: 50px;
+    }
+
+    header .logo h1 {
+        font-size: 0.8rem;
     }
 
     nav ul {
