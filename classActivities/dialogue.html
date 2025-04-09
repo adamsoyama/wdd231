@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course Catalog</title>
+    <link rel="stylesheet" href="styles/dialogue.css" />
+    <!-- ✅ Native HTML Modal Dialog -->
+    <dialog id="course-details"></dialog>
+    <script src="scripts/dialogue.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>My Course Catalog</h1>
+        <div class="menu-toggle">☰</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Courses</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Available Courses</h2>
+        <div class="button-container">
+            <button>All</button>
+            <button>CSE</button>
+            <button>WDD</button>
+        </div>
+        <div id="courses"></div>
+    </main>
+
+    <footer>
+        <p id="currentyear"></p>
+        <p id="lastUpdated"></p>
+    </footer>
+
+</body>
+
+</html>

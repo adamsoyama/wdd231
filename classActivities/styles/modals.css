@@ -1,0 +1,147 @@
+:root {
+    --color-dark-blue-bg: #003377;
+    --color-light-grey-bg: #f5f7fa;
+    --color-white: #ffffff;
+    --color-accent: #f68d23;
+    --color-cse: #d9edf7;
+    --color-wdd: #f2dede;
+    --color-heading-bg: #328ec8;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-light-grey-bg);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-dark-blue-bg);
+    color: var(--color-white);
+    padding: 1rem 2rem;
+}
+
+header img {
+    width: 70px;
+    border-radius: 15px;
+}
+
+header h1 {
+    font-size: 2rem;
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: var(--color-dark-blue-bg);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--color-heading-bg);
+}
+
+#courses {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.course {
+    padding: 15px;
+    border-radius: 5px;
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+.course.cse {
+    background-color: var(--color-cse);
+}
+
+.course.wdd {
+    background-color: var(--color-wdd);
+}
+
+footer {
+    background-color: var(--color-dark-blue-bg);
+    color: var(--color-white);
+    text-align: center;
+    padding: 1rem;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: var(--color-white);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.close-btn {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}

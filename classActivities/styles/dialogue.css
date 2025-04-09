@@ -1,0 +1,26 @@
+/* Styling for dialog modal */
+dialog {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: .25rem;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    box-shadow: 0 0 3rem #777;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+dialog button#closeModal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.2rem;
+    padding: .4rem .8rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #eee;
+    cursor: pointer;
+}
