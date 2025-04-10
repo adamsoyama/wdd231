@@ -5,69 +5,69 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body {
+}
+
+body {
     font-family: 'Roboto', sans-serif;
     background-color: #ffffff;
     color: #333;
     line-height: 1.6;
-  }
-  
-  /* Header Styling */
-  header {
+}
+
+/* Header Styling */
+header {
     background-color: #003377;
     color: #fff;
     text-align: center;
     padding: 3rem 1rem;
-  }
-  
-  header h1 {
+}
+
+header h1 {
     font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
-  }
-  
-  header p {
+}
+
+header p {
     font-size: 1.1rem;
     font-style: italic;
-  }
-  
-  /* Main Thank You Section */
-  main.thankyou-summary {
+}
+
+/* Main Thank You Section */
+main.thankyou-summary {
     padding: 3rem 2rem;
     display: flex;
     justify-content: center;
-  }
-  
-  .thankyou-summary section {
+}
+
+.thankyou-summary section {
     background-color: #f8f8f8;
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     max-width: 600px;
     width: 100%;
-  }
-  
-  .thankyou-summary h2 {
+}
+
+.thankyou-summary h2 {
     font-family: 'Playfair Display', serif;
     color: #003377;
     margin-bottom: 1.5rem;
     text-align: center;
     font-size: 2rem;
-  }
-  
-  .thankyou-summary p {
+}
+
+.thankyou-summary p {
     font-size: 1rem;
     margin-bottom: 0.75rem;
-  }
-  
-  .thankyou-summary strong {
+}
+
+.thankyou-summary strong {
     color: #0055aa;
-  }
-  
-  /* Footer Styling */
-  footer {
+}
+
+/* Footer Styling */
+footer {
     background-color: #003377;
     color: #fff;
     text-align: center;
@@ -75,5 +75,4 @@
     font-size: 0.95rem;
     font-style: italic;
     margin-top: 3rem;
-  }
-  
+}

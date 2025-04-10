@@ -108,7 +108,8 @@ input:required,
 select:required,
 textarea:required {
   position: relative;
-  border-left: 4px solid #d93025; /* softer red */
+  border-left: 4px solid #d93025;
+  /* softer red */
   padding-left: 10px;
 }
 
@@ -235,8 +236,10 @@ button.close {
   cursor: pointer;
   border-radius: 8px;
   font-size: 1.1rem;
-  display: block;              /* makes the button take up full width line */
-  margin: 1.5rem auto 0;       /* top auto bottom margin for centering */
+  display: block;
+  /* makes the button take up full width line */
+  margin: 1.5rem auto 0;
+  /* top auto bottom margin for centering */
   transition: background-color 0.3s ease;
 }
 

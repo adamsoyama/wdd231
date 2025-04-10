@@ -1,20 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Set timestamp
- // Set timestamp in a clean format: "April 11, 2025 00:10:15"
-const timestampField = document.getElementById("timestamp");
-if (timestampField) {
-  const now = new Date();
-  const formatted = now.toLocaleString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
-    hour12: false
-  });
-  timestampField.value = formatted;
-}
+  // Set timestamp in a clean format: "April 11, 2025 00:10:15"
+  const timestampField = document.getElementById("timestamp");
+  if (timestampField) {
+    const now = new Date();
+    const formatted = now.toLocaleString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: false
+    });
+    timestampField.value = formatted;
+  }
 
 
   // Modal setup using <dialog>
