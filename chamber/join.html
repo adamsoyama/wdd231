@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Page - Calabar Chamber of Commerce and Industry</title>
+    <meta name="description" content="Join Calabar Chamber of Commerce and Industry">
+    <meta name="author" content="Adams Oyama">
+    <meta name="keywords" content="Calabar Chamber of Commerce, Business, Calabar, Nigeria">
+    <meta property="og:title" content="Calabar Chamber of COmmerce and Industry Join Page">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/ccci-logo.png">
+    <meta property="og:url" content="https://adamsoyama.github.io/wdd231/chamber/index.html">
+    <meta property="og:description" content="Connecting commerce and community in Calabar">
+    <link rel="canonical" href="https://adamsoyama.github.io/wdd231/chamber/index.html">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="images/ccci-favicon.png">
+    <link rel="stylesheet" href="styles/join.css">
+    <script src="scripts/join.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/ccci-logo.png" alt="Calabar Chamber of Commerce Logo" width="70" loading="lazy">
+            <h1>Calabar Chamber of Commerce and Industry</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="join-container">
+            <section class="form-section">
+                <form method="get" action="thankyou.html">
+                    <label>First Name:
+                        <input type="text" name="firstname" required title="First Name" autocomplete="given-name" />
+                    </label>
+                    <label>Last Name:
+                        <input type="text" name="lastname" required title="Last Name" autocomplete="family-name" />
+                    </label>
+                    <label>Title in Organization:
+                        <input type="text" name="orgtitle" title="Title in Organization"
+                            autocomplete="organization-title" pattern="[A-Za-z\-\s]{7,}" />
+                    </label>
+                    <label>Email:
+                        <input type="email" name="email" required title="Email" autocomplete="email"
+                            placeholder="Example: username@email.com" />
+                    </label>
+                    <label>Mobile Phone:
+                        <input type="tel" name="phone" required title="Mobile Number" autocomplete="tel" />
+                    </label>
+                    <label>Business/Organization Name:
+                        <input type="text" name="orgname" required title="Business Name" autocomplete="organization" />
+                    </label>
+                    <label>Membership Level:
+                        <select name="membership">
+                            <option value="np">NP Membership (Free)</option>
+                            <option value="bronze">Bronze</option>
+                            <option value="silver">Silver</option>
+                            <option value="gold">Gold</option>
+                        </select>
+                    </label>
+                    <label>Business Description:
+                        <textarea name="description" title="Business Description"></textarea>
+                    </label>
+                    <input type="hidden" name="timestamp" id="timestamp" />
+                    <input type="submit" value="Join Now" />
+                </form>
+            </section>
+            <section class="membership-cards">
+                <div class="card" id="np">
+                    <h3>NP Membership</h3>
+                    <a href="#" class="info-link" data-modal="modal-np">More Info</a>
+                </div>
+                <div class="card" id="bronze">
+                    <h3>Bronze Membership</h3>
+                    <a href="#" class="info-link" data-modal="modal-bronze">More Info</a>
+                </div>
+                <div class="card" id="silver">
+                    <h3>Silver Membership</h3>
+                    <a href="#" class="info-link" data-modal="modal-silver">More Info</a>
+                </div>
+                <div class="card" id="gold">
+                    <h3>Gold Membership</h3>
+                    <a href="#" class="info-link" data-modal="modal-gold">More Info</a>
+                </div>
+            </section>
+        </div>
+
+        <!-- Modals -->
+        <dialog id="modal-np">
+            <h4>NP Membership</h4>
+            <p>No fees. Ideal for non-profits. Includes access to community service events.</p>
+            <button class="close" aria-label="Close NP">Close</button>
+        </dialog>
+        <dialog id="modal-bronze">
+            <h4>Bronze Membership</h4>
+            <p>Includes discounts to events and a listing in the online directory.</p>
+            <button class="close" aria-label="Close Bronze">Close</button>
+        </dialog>
+        <dialog id="modal-silver">
+            <h4>Silver Membership</h4>
+            <p>All Bronze benefits plus featured listing and basic advertising.</p>
+            <button class="close" aria-label="Close Silver">Close</button>
+        </dialog>
+        <dialog id="modal-gold">
+            <h4>Gold Membership</h4>
+            <p>All Silver benefits plus spotlight promotion and exclusive training invites.</p>
+            <button class="close" aria-label="Close Gold">Close</button>
+        </dialog>
+    </main>
+    <footer>
+        <div class="address">
+            <h3>Calabar Chamber of Commerce and Industry</h3>
+            <p>156 Ndidem Isong Raod, Calabar, Nigeria</p>
+            <p><a href="mailto:info@ccci.org">info@ccci.org</a></p>
+            <p>(+234) 813 578 0989</p>
+        </div>
+        <div class="social-media">
+            <a href="https://www.facebook.com/ccci.org" target="_blank" aria-label="Facebook">
+                <img src="images/facebook.png" alt="Facebook" class="social-icon">
+            </a>
+            <a href="https://x.com/ccci_org" target="_blank" aria-label="X">
+                <img src="images/x.png" alt="X" class="social-icon">
+            </a>
+            <a href="https://youtube.com/ccci.org" target="_blank" aria-label="YouTube">
+                <img src="images/youtube.png" alt="YouTube" class="social-icon">
+            </a>
+        </div>
+        <div class="developer-info">
+            <h3>WDD231 Class Project</h3>
+            <p>Adams Oyama - WDD 231</p>
+            <p>&copy; <span id="year"></span> &bull; Calabar Chamber of Commerce and Industry</p>
+            <p>Last Modified: <span id="last-modified"></span></p>
+        </div>
+    </footer>
+</body>
+
+</html>

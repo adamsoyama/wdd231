@@ -1,0 +1,307 @@
+/* Updated CSS for Chamber Join Page - Calabar Chamber of Commerce */
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #003377;
+  color: #fff;
+  padding: 20px;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+header .logo img {
+  width: 70px;
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Navigation */
+nav ul {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  list-style: none;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a.active,
+nav a:hover {
+  color: #FFD700;
+  transition: color 0.3s ease;
+}
+
+/* Main Layout */
+.main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  /* 2:1 ratio for form and modal */
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.join-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  /* two equal columns */
+  gap: 4rem;
+  padding: 2rem;
+}
+
+form {
+  margin: 2rem;
+  background: #f8f8f8;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+input:required,
+select:required,
+textarea:required {
+  position: relative;
+  border-left: 4px solid #d93025; /* softer red */
+  padding-left: 10px;
+}
+
+
+input[type="submit"] {
+  background-color: #003377;
+  color: white;
+  border: none;
+  margin-top: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #0055aa;
+}
+
+/* Modal section container */
+.membership-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: space-around;
+}
+
+/* Card styling */
+.card {
+
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.info-link {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.info-link:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+/* Modal styling */
+dialog {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 0 3rem #777;
+  width: 90%;
+  max-width: 600px;
+
+  /* Centering Styles */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+
+  animation: fadeIn 0.3s ease-out;
+}
+
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Animation for modal appearance */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+dialog h4 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #007BFF;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+}
+
+dialog p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Close button styling */
+button.close {
+  background-color: #f44336;
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  display: block;              /* makes the button take up full width line */
+  margin: 1.5rem auto 0;       /* top auto bottom margin for centering */
+  transition: background-color 0.3s ease;
+}
+
+
+button.close:hover {
+  background-color: #d32f2f;
+}
+
+/* Optional: Adjust modal position on small screens */
+@media screen and (max-width: 600px) {
+  dialog {
+    padding: 1.5rem;
+    max-width: 90%;
+  }
+
+  button.close {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
+
+/* Footer */
+footer {
+  background-color: #003377;
+  color: #fff;
+  padding: 30px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer .address,
+footer .developer-info,
+footer .social-media {
+  flex: 1;
+  margin: 10px;
+}
+
+footer h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+}
+
+footer p,
+footer a {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #fff;
+}
+
+.social-media {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.social-icon {
+  width: 30px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
