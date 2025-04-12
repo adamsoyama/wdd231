@@ -1,0 +1,314 @@
+/* RESET & BASE STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+    color: #1e1e1e;
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background-color: #003377;
+    color: #fff;
+    padding: 20px;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+header .logo img {
+    width: 70px;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* NAVIGATION */
+nav ul {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    list-style: none;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+nav a.active,
+nav a:hover {
+    color: #FFD700;
+    transition: color 0.3s ease;
+}
+
+/* MAIN LAYOUT */
+.discover-layout {
+    display: grid;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+/* VISIT MESSAGE */
+.visit-message {
+    font-weight: bold;
+    background-color: #edf6f9;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+/* CARDS */
+.cards .card {
+    background-color: #fff;
+    border: 1px solid #E0E0E0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cards img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.cards .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.discover-cards h2 {
+    font-size: 1.25rem;
+    color: #1C2B49;
+    margin-bottom: 0.5rem;
+}
+
+.discover-cards address {
+    font-style: normal;
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+    color: #2E2E2E;
+}
+
+.discover-cards p {
+    font-size: 0.95rem;
+    color: #444;
+    margin-bottom: 0.75rem;
+}
+
+.discover-cards button {
+    background-color: #FFD700;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    color: #1C2B49;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.discover-cards button:hover,
+.discover-cards button:focus {
+    background-color: #e6c200;
+    outline: none;
+}
+
+/* FOOTER */
+footer {
+    background-color: #003377;
+    color: #fff;
+    padding: 30px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer .address,
+footer .developer-info,
+footer .social-media {
+    flex: 1;
+    margin: 10px;
+}
+
+footer h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+}
+
+footer p,
+footer a {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #ffffff;
+}
+
+.social-media {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.social-icon {
+    width: 30px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* ACCESSIBILITY */
+a:focus,
+button:focus {
+    outline: 3px dashed #FFD700;
+    outline-offset: 3px;
+}
+
+/* HOVER (MEDIUM+) */
+@media (min-width: 641px) {
+    .discover-cards img:hover {
+        transform: scale(1.05);
+        filter: brightness(1.05);
+    }
+}
+
+/* SMALL SCREENS */
+@media screen and (max-width: 640px) {
+    .discover-layout {
+        grid-template-areas:
+            "message"
+            "cards";
+        grid-template-columns: 1fr;
+    }
+
+    .visit-message {
+        grid-area: message;
+    }
+
+    .discover-cards {
+        grid-area: cards;
+    }
+
+    .cards .card {
+        margin-bottom: 1rem;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-media {
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+
+/* MEDIUM SCREENS */
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+    .discover-layout {
+        grid-template-areas:
+            "message message"
+            "cards cards";
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .visit-message {
+        grid-area: message;
+    }
+
+    .discover-cards {
+        grid-area: cards;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+}
+
+/* LARGE SCREENS */
+@media screen and (min-width: 1025px) {
+    .discover-layout {
+        grid-template-areas:
+            "message message"
+            "cards cards";
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .visit-message {
+        grid-area: message;
+        background-color: #edf6f9;
+        padding: 1.5rem;
+        border-radius: 12px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .discover-cards {
+        grid-area: cards;
+        display: grid;
+        grid-template-areas:
+            "card1 card2 card3"
+            "card4 card5 card6"
+            "card7 card8 .";
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .discover-cards .card:nth-child(1) {
+        grid-area: card1;
+    }
+
+    .discover-cards .card:nth-child(2) {
+        grid-area: card2;
+    }
+
+    .discover-cards .card:nth-child(3) {
+        grid-area: card3;
+    }
+
+    .discover-cards .card:nth-child(4) {
+        grid-area: card4;
+    }
+
+    .discover-cards .card:nth-child(5) {
+        grid-area: card5;
+    }
+
+    .discover-cards .card:nth-child(6) {
+        grid-area: card6;
+    }
+
+    .discover-cards .card:nth-child(7) {
+        grid-area: card7;
+    }
+
+    .discover-cards .card:nth-child(8) {
+        grid-area: card8;
+    }
+}
