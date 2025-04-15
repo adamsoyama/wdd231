@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Tinapa Resort",
+        "address": "Tinapa Free Zone & Resort, Adiabo, Calabar",
+        "image": "assets/images/tinapa-resort.webp",
+        "description": "A luxurious business and leisure resort featuring a massive shopping complex, entertainment center, and scenic waterfront."
+    },
+    {
+        "name": "Drill Ranch",
+        "address": "Calabar, Cross River State",
+        "image": "assets/images/drill-ranch.webp",
+        "description": "Home to endangered Drill monkeys, this wildlife sanctuary supports conservation and offers an educational experience for visitors."
+    },
+    {
+        "name": "Slave History Museum",
+        "address": "Marina Resort, Calabar",
+        "image": "assets/images/slave-history.webp",
+        "description": "Located within Marina Resort, this museum offers a deep dive into Nigeria’s colonial and transatlantic slave trade history."
+    },
+    {
+        "name": "National Museum Calabar",
+        "address": "Off Calabar Road, Calabar",
+        "image": "assets/images/national-museum.webp",
+        "description": "Exhibiting artifacts from the Efik Kingdom, colonial rule, and Calabar’s cultural history, this museum is a must-see for history lovers."
+    },
+    {
+        "name": "Kwa Falls",
+        "address": "Akamkpa LGA, Calabar",
+        "image": "assets/images/kwa-falls.webp",
+        "description": "A stunning natural waterfall cascading into a lush rainforest basin, ideal for hiking, picnicking, and swimming."
+    },
+    {
+        "name": "Millennium Park",
+        "address": "Calabar Municipal, Calabar",
+        "image": "assets/images/millennium-park.webp",
+        "description": "A serene urban park with walkways, green spaces, and local art—perfect for relaxation and family outings."
+    },
+    {
+        "name": "Agbokim Waterfalls",
+        "address": "Etung LGA, Cross River State",
+        "image": "assets/images/agbokim-waterfall.webp",
+        "description": "A breathtaking seven-stream waterfall located in lush rainforest, perfect for eco-tourism, hiking, and nature photography."
+    },
+    {
+        "name": "Obudu Mountain Resort",
+        "address": "Obanliku LGA, Cross River State",
+        "image": "assets/images/obudu-mountain.webp",
+        "description": "Nestled on the Sankwala Mountains, this resort offers cable cars, mountain villas, and panoramic views of nature and adventure trails."
+    }
+]

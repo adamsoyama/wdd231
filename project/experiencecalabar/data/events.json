@@ -1,0 +1,27 @@
+[
+    {
+      "title": "Cultural Carnival",
+      "date": "2025-12-27",
+      "description": "Experience the best of African music and dance, featuring live performances by top African artists. A celebration of rich cultural diversity and artistic talent.",
+      "image": "assets/images/cultural-carnival.jpg"
+    },
+    {
+      "title": "Main Carnival and Street Party",
+      "date": "2025-12-28",
+      "description": "The heart of the Calabar Carnival! Join thousands of revelers as they take to the streets for the grand parade, with traditional dance performances from various cultures, vibrant costumes, and endless entertainment.",
+      "image": "assets/images/calabar_carnival_2.jpg"
+    },
+    {
+      "title": "International Carnival",
+      "date": "2025-12-29",
+      "description": "A celebration of global cultures with performances from international artists, showcasing dance, music, and colorful costumes from around the world.",
+      "image": "assets/images/international-carnival (1).jpg"
+    },
+    {
+      "title": "Miss Africa International Pageant",
+      "date": "2025-12-30",
+      "description": "A night of elegance and beauty as contestants from across the continent compete for the coveted title of Miss Africa. Enjoy fashion, talent displays, and performances from top African entertainers.",
+      "image": "assets/images/dance-showcase.jpg"
+    }
+  ]
+  

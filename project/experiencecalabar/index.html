@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Official tourism site for the Calabar Carnival - discover events, book your trip, and experience Africa's biggest street party.">
+    <meta name="author" content="Adams Oyama">
+    <meta name="keywords"
+        content="Calabar Carnival, Nigeria Tourism, African Culture, Street Party, Calabar Events, Travel Nigeria, Carnival 2025">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Experience Calabar Carnival 2025">
+    <meta property="og:description"
+        content="Plan your trip, explore events, and experience the joy of Africa's biggest street party!">
+    <meta property="og:image" content="assets/images/carnival-main.jpg">
+    <meta property="og:url" content="https://experiencecalabar.ng">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_NG">
+
+    <!-- Theme & Manifest -->
+    <meta name="theme-color" content="#003377">
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TouristDestination",
+    "name": "Experience Calabar Carnival 2025",
+    "url": "https://experiencecalabar.ng",
+    "description": "Official tourism site for the Calabar Carnival – discover events, book your trip, and experience Africa's biggest street party.",
+    "image": "https://experiencecalabar.ng/assets/images/carnival-main.jpg",
+    "touristType": "Festival lovers, cultural explorers, global tourists",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "4.9757",
+      "longitude": "8.3417"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Calabar",
+      "addressCountry": "NG"
+    },
+    "sameAs": [
+      "https://facebook.com/calabarcarnival",
+      "https://instagram.com/experiencecalabar",
+      "https://twitter.com/calabarcarnival"
+    ]
+  }
+  </script>
+
+    <title>Experience Calabar Carnival 2025</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        media="all">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/icons/favicon.ico">
+
+    <!-- Preload Hero Image -->
+    <link rel="preload" as="image" href="assets/images/carnival-main.jpg" type="image/jpeg">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/index.css">
+    <script src="scripts/index.js" defer></script>
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="main-header">
+        <div class="container nav-container">
+            <img src="assets/icons/logo.png" alt="Experience Calabar Logo" class="logo" loading="eager" width="80">
+            <nav class="main-nav" aria-label="Main Navigation">
+                <ul>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#trip">Plan Your Trip</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+        <section class="hero-section">
+            <div class="hero-slideshow" aria-hidden="true">
+                <img src="assets/images/carnival-main.jpg" alt="carnival calabar" loading="lazy">
+                <img src="assets/images/calabar_carnival_2.jpg" alt="carnival calabar" loading="lazy">
+                <img src="assets/images/cultural-carnival.jpg" alt="carnival calabar" loading="lazy">
+            </div>
+            <h1>Experience the Magic of Calabar Carnival</h1>
+            <div class="hero-weather" id="weather-widget" aria-label="Live Weather">
+                <!-- Injected dynamically -->
+            </div>
+            <div id="countdown" class="countdown-timer" aria-live="polite">00:00:00</div>
+            <a href="#events" class="cta-button">Explore Events</a>
+        </section>
+
+        <section id="events" class="featured-events" aria-labelledby="events-heading">
+            <h2 id="events-heading">Featured Events</h2>
+            <div class="event-cards">
+                <!-- Dynamically populated -->
+            </div>
+        </section>
+
+        <section id="trip" class="plan-trip" aria-labelledby="trip-heading">
+            <h2 id="trip-heading">Plan Your Trip</h2>
+            <div class="trip-grid">
+              <div class="trip-card">
+                <i class="fas fa-plane-departure"></i>
+                <h3>Flights</h3>
+                <p>Find the best flights to Calabar and nearby cities with ease.</p>
+                <a href="#flights" class="cta-mini">View Flights</a>
+              </div>
+              <div class="trip-card">
+                <i class="fas fa-hotel"></i>
+                <h3>Hotels</h3>
+                <p>Book comfortable and affordable hotels close to all the action.</p>
+                <a href="#hotels" class="cta-mini">Browse Hotels</a>
+              </div>
+              <div class="trip-card">
+                <i class="fas fa-car"></i>
+                <h3>Transportation</h3>
+                <p>Explore car rentals and local transport options for your stay.</p>
+                <a href="#transport" class="cta-mini">See Options</a>
+              </div>
+            </div>
+          </section>
+          
+
+        <section id="spotlight" class="spotlight-experiences" aria-labelledby="spotlight-heading">
+            <h2 id="spotlight-heading">Spotlight Experiences</h2>
+            <div class="spotlight-cards">
+                <!-- Injected dynamically from JSON -->
+            </div>
+        </section>
+
+        <section id="about" class="about-section" aria-labelledby="about-heading">
+            <div class="about-left">
+                <h2 id="about-heading">Why Calabar?</h2>
+                <img src="assets/images/why-calabar.jpg" alt="Calabar Carnival Celebration" loading="lazy" width="600">
+            </div>
+            <div class="about-right">
+                <h3>About Calabar Carnival</h3>
+                <p>Learn about the rich history, cultural groups, and international participation that make Calabar
+                    Carnival the pride of Africa.</p>
+                <a href="about.html" class="learn-more">Learn More</a>
+            </div>
+        </section>
+        <section id="newsletter" class="newsletter-section" aria-labelledby="newsletter-heading">
+            <h2 id="newsletter-heading">Stay Updated</h2>
+            <form action="#" method="post" class="newsletter-form">
+                <label for="email" class="visually-hidden">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 Experience Calabar. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="https://facebook.com/calabarcarnival">Facebook</a>
+            <a href="https://instagram.com/experiencecalabar">Instagram</a>
+            <a href="https://twitter.com/calabarcarnival">Twitter</a>
+        </div>
+        <p>Contact us: <a href="mailto:info@experiencecalabar.ng">info@experiencecalabar.ng</a></p>
+    </footer>
+</body>
+
+</html>
