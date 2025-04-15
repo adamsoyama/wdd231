@@ -189,6 +189,41 @@ img {
     width: 100%;
 }
 
+/* Menu Toggle (Hamburger) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    margin-left: auto;
+    transition: var(--transition-default);
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--off-white);
+    border-radius: 2px;
+    transition: var(--transition-default);
+}
+
+/* Rotate for open state (optional animation) */
+.menu-toggle.open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
 /* Responsive Nav (Mobile First Toggle Placeholder — optional) */
 @media (max-width: 768px) {
     .main-nav ul {
@@ -203,6 +238,23 @@ img {
 
     .main-nav.active ul {
         display: flex;
+    }
+
+    /* Show toggle on small screens */
+    .menu-toggle {
+        display: flex;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        background-color: var(--ebony);
+        width: 100%;
+        padding: 1rem 0;
+        border-radius: 0.5rem;
+    }
+
+    .main-nav {
+        width: 100%;
     }
 }
 
@@ -355,6 +407,7 @@ img {
         padding: 1rem 0;
         margin-bottom: 1rem;
     }
+
     .hero-section h1 {
         text-align: center;
         font-size: 1rem;
@@ -401,15 +454,17 @@ img {
 
 .featured-events {
     padding: 4rem 1rem;
-    background-color: var(--soft-ivory); /* Warm ivory background */
-    color: var(--ebony);                 /* Deep charcoal text */
+    background-color: var(--soft-ivory);
+    /* Warm ivory background */
+    color: var(--ebony);
+    /* Deep charcoal text */
     text-align: center;
     position: relative;
     z-index: 1;
 }
 
 .featured-events h2 {
-    color: var(--ebony);         
+    color: var(--ebony);
     margin-bottom: 2rem;
     font-weight: 700;
     font-family: var(--font-main);
@@ -427,8 +482,10 @@ img {
 
 /* Each Event Card */
 .event-card {
-    background-color: white;       /* Light neutral card background */
-    border: 1px solid var(--slate-gray);      /* Cool gray border */
+    background-color: white;
+    /* Light neutral card background */
+    border: 1px solid var(--slate-gray);
+    /* Cool gray border */
     border-radius: 1.5rem;
     overflow: hidden;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
@@ -445,7 +502,8 @@ img {
 }
 
 .event-card h3 {
-    color: var(--royal-indigo);               /* Primary deep indigo */
+    color: var(--royal-indigo);
+    /* Primary deep indigo */
     margin: 1rem 1rem 0.5rem;
     font-weight: 600;
     font-family: var(--font-main);
@@ -454,14 +512,16 @@ img {
 .event-card p {
     font-size: 1rem;
     margin: 0.25rem 1rem 1rem;
-    color: var(--ebony);                      /* Deep charcoal text */
+    color: var(--ebony);
+    /* Deep charcoal text */
     font-family: var(--font-main);
 }
 
 /* Hover animation */
 .event-card:hover {
     transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 10px 30px rgba(26, 35, 126, 0.3); /* indigo glow */
+    box-shadow: 0 10px 30px rgba(26, 35, 126, 0.3);
+    /* indigo glow */
 }
 
 /* Scroll Reveal Animation */
@@ -471,9 +531,17 @@ img {
     animation: fadeUp 0.8s ease forwards;
 }
 
-.event-card:nth-child(1) { animation-delay: 0.1s; }
-.event-card:nth-child(2) { animation-delay: 0.3s; }
-.event-card:nth-child(3) { animation-delay: 0.5s; }
+.event-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.event-card:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.event-card:nth-child(3) {
+    animation-delay: 0.5s;
+}
 
 @keyframes fadeUp {
     to {
@@ -486,7 +554,7 @@ img {
    Plan Your Trip Section
    =============================== */
 
-   .plan-trip {
+.plan-trip {
     padding: 4rem 1rem;
     background-color: var(--off-white);
     color: var(--ebony);
@@ -569,7 +637,7 @@ img {
    Spotlight Experiences Section
    =============================== */
 
-   .spotlight-experiences {
+.spotlight-experiences {
     background-color: var(--soft-ivory);
     padding: 1rem;
     text-align: center;
@@ -661,7 +729,7 @@ img {
    About Section (Grid Layout)
    =========================== */
 
-   .about-section {
+.about-section {
     width: 80%;
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -765,9 +833,11 @@ img {
 /* Newsletter Section */
 .newsletter-section {
     width: 100%;
-    max-width: 700px; /* Slimmer overall width */
-    margin: 3rem auto 0 auto; /* Center horizontally with margin-top */
-    background-color: var(--ebony); 
+    max-width: 700px;
+    /* Slimmer overall width */
+    margin: 3rem auto 0 auto;
+    /* Center horizontally with margin-top */
+    background-color: var(--ebony);
     color: var(--off-white);
     text-align: center;
     padding: 1.5rem;
@@ -780,7 +850,8 @@ img {
 .newsletter-section h2 {
     color: white;
     font-size: 1.5rem;
-    font-weight: 500; /* Less bold */
+    font-weight: 500;
+    /* Less bold */
     margin-bottom: 0.75rem;
     line-height: 1.4;
 }

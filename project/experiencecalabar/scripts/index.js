@@ -70,8 +70,8 @@ async function initWeather() {
       temp >= 30
         ? "It's hot and festive – pack light!"
         : temp >= 20
-        ? "Perfect weather for carnival vibes!"
-        : "Cool breeze – bring a light jacket.";
+          ? "Perfect weather for carnival vibes!"
+          : "Cool breeze – bring a light jacket.";
 
     weatherEl.innerHTML = `
       <div class="weather-top">
@@ -199,3 +199,14 @@ async function loadSpotlightExperiences() {
     console.error("Spotlight fetch error:", err);
   }
 }
+
+const toggleButton = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.main-nav');
+
+toggleButton.addEventListener('click', () => {
+  nav.classList.toggle('active');
+  toggleButton.classList.toggle('open');
+
+  const expanded = toggleButton.getAttribute('aria-expanded') === 'true';
+  toggleButton.setAttribute('aria-expanded', !expanded);
+});
