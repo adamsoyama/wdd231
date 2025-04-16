@@ -1,27 +1,74 @@
 [
-    {
-      "title": "Cultural Carnival",
-      "date": "2025-12-27",
-      "description": "Experience the best of African music and dance, featuring live performances by top African artists. A celebration of rich cultural diversity and artistic talent.",
-      "image": "assets/images/cultural-carnival.jpg"
-    },
-    {
-      "title": "Main Carnival and Street Party",
-      "date": "2025-12-28",
-      "description": "The heart of the Calabar Carnival! Join thousands of revelers as they take to the streets for the grand parade, with traditional dance performances from various cultures, vibrant costumes, and endless entertainment.",
-      "image": "assets/images/calabar_carnival_2.jpg"
-    },
-    {
-      "title": "International Carnival",
-      "date": "2025-12-29",
-      "description": "A celebration of global cultures with performances from international artists, showcasing dance, music, and colorful costumes from around the world.",
-      "image": "assets/images/international-carnival (1).jpg"
-    },
-    {
-      "title": "Miss Africa International Pageant",
-      "date": "2025-12-30",
-      "description": "A night of elegance and beauty as contestants from across the continent compete for the coveted title of Miss Africa. Enjoy fashion, talent displays, and performances from top African entertainers.",
-      "image": "assets/images/dance-showcase.jpg"
-    }
-  ]
-  
+  {
+    "id": "opening-ceremony",
+    "title": "Opening Ceremony",
+    "date": "2025-12-01",
+    "location": "Calabar International Convention Centre",
+    "category": "Ceremony",
+    "description": "Kick off the Calabar Carnival in grand style with a vibrant opening ceremony featuring music, dance, keynote speakers, and cultural displays from across Nigeria.",
+    "image": "assets/images/opening.jpg"
+  },
+  {
+    "id": "cultural-carnival",
+    "title": "Cultural Carnival",
+    "date": "2025-12-27",
+    "location": "Millennium Park, Calabar",
+    "category": "Cultural",
+    "description": "Experience the best of African music and dance, featuring live performances by top African artists. A celebration of rich cultural diversity and artistic talent.",
+    "image": "assets/images/cultural-carnival.jpg"
+  },
+  {
+    "id": "main-carnival",
+    "title": "Main Carnival and Street Party",
+    "date": "2025-12-28",
+    "location": "Calabar Street Parade Route",
+    "category": "Parade",
+    "description": "The heart of the Calabar Carnival! Join thousands of revelers as they take to the streets for the grand parade, with traditional dance performances from various cultures, vibrant costumes, and endless entertainment.",
+    "image": "assets/images/calabar_carnival_2.jpg"
+  },
+  {
+    "id": "international-carnival",
+    "title": "International Carnival",
+    "date": "2025-12-29",
+    "location": "U. J. Esuene Stadium",
+    "category": "International",
+    "description": "A celebration of global cultures with performances from international artists, showcasing dance, music, and colorful costumes from around the world.",
+    "image": "assets/images/international-carnival (1).jpg"
+  },
+  {
+    "id": "miss-africa-pageant",
+    "title": "Miss Africa International Pageant",
+    "date": "2025-12-30",
+    "location": "Calabar International Convention Centre",
+    "category": "Pageant",
+    "description": "A night of elegance and beauty as contestants from across the continent compete for the coveted title of Miss Africa. Enjoy fashion, talent displays, and performances from top African entertainers.",
+    "image": "assets/images/miss-africa.jpg"
+  },
+  {
+    "id": "worship-night",
+    "title": "Solemn Assembly & Worship Night",
+    "date": "2025-12-22",
+    "location": "Calabar Sports Club Grounds",
+    "category": "Spiritual",
+    "description": "A night of spiritual reflection, worship, and praise. Join believers from around the world in this uplifting and soulful gathering under the stars.",
+    "image": "assets/images/prayer.jpeg"
+  },
+  {
+    "id": "funfest",
+    "title": "Calabar FunFest",
+    "date": "2025-12-25",
+    "location": "Marina Resort, Calabar",
+    "category": "Entertainment",
+    "description": "A family-friendly day of games, food, music, and laughter! Enjoy face painting, boat rides, concerts, and a carnival village for kids and adults alike.",
+    "image": "assets/images/men.jpeg"
+  },
+  {
+    "id": "closing-ceremony",
+    "title": "Closing Ceremony",
+    "date": "2025-12-31",
+    "location": "Calabar International Convention Centre",
+    "category": "Ceremony",
+    "description": "Celebrate the end of an unforgettable month of festivities with music, fireworks, and final performances to wrap up the carnival season in style.",
+    "image": "assets/images/1.jpg"
+  }
+]
