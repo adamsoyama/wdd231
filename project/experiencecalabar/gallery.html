@@ -68,8 +68,8 @@
     <link rel="preload" as="image" href="assets/images/carnival-main.jpg" type="image/jpeg">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="styles/events.css">
-    <script src="scripts/events.js" defer></script>
+    <link rel="stylesheet" href="styles/gallery.css">
+    <script src="scripts/gallery.js" defer></script>
 </head>
 
 <body>
@@ -98,50 +98,65 @@
             </nav>
         </div>
     </header>
-
-
-    <!-- Events Page -->
-    <main class="events-page">
-        <!-- Hero Banner -->
-        <section class="events-hero">
-            <div class="container">
-                <h1>Experience the Carnival Magic</h1>
-                <p>Discover all the upcoming events and festivities of Calabar Carnival.</p>
-            </div>
+    <main class="gallery-section">
+        <section class="gallery-hero">
+            <h1>Calabar Carnival Gallery</h1>
+            <p>Relive the magic, culture, and colors of past celebrations!</p>
         </section>
 
-        <!-- Filter Controls -->
-        <section class="event-filters container">
-            <h2>Filter Events</h2>
-            <div class="filters">
-                <select id="categoryFilter" aria-label="Filter by category">
-                    <option value="all">All Categories</option>
-                    <option value="parade">Parade</option>
-                    <option value="concert">Concert</option>
-                    <option value="cultural">Cultural Show</option>
-                </select>
-
-                <input type="date" id="dateFilter" aria-label="Filter by date">
-            </div>
-        </section>
-        <!-- All Events Section -->
-        <section class="all-events container">
-            <h2>All Events</h2>
-            <div class="event-grid">
-                <!-- All event cards will populate here -->
-            </div>
-        </section>
-
-        <!-- Countdown Section -->
-        <section class="countdown-section">
-            <div class="container">
-                <h2>Countdown to the Grand Opening</h2>
-                <div id="countdown">
-                    <!-- Timer will be dynamically added -->
-                </div>
-            </div>
+        <section class="gallery-grid">
+            <!-- Sample Images – Replace with actual .webp images -->
+            <figure class="gallery-item">
+                <img src="assets/images/1.jpg" alt="Colorful dancers at Calabar Carnival" />
+                <figcaption>Street Parade</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="assets/images/culture1.jpg" alt="Masked performers in costume" />
+                <figcaption>Cultural Troupe</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="assets/images/crowd2.webp" alt="Crowds cheering during night festivities" />
+                <figcaption>Night Festivities</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="assets/images/float.jpeg" alt="Carnival float moving through the street" />
+                <figcaption>Royal Float</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="assets/images/menc.jpg" alt="Traditional dancers performing" />
+                <figcaption>Traditional Dance Show</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="assets/images/cali-2.jpg" alt="Street performers entertaining crowd" />
+                <figcaption>Live Street Performance</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="assets/images/crowd.webp" alt="Spectators waving flags at the carnival" />
+                <figcaption>Carnival Spectators</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="assets/images/drumming.jpg" alt="Group of drummers energizing the crowd" />
+                <figcaption>Drumming Performance</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="assets/images/carnival-main.jpg" alt="Dancers with vibrant costumes" />
+                <figcaption>Vibrant Costumes Showcase</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="assets/images/fireworks.jpg" alt="Fireworks lighting up the night sky" />
+                <figcaption>Fireworks Celebration</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="assets/images/bikers.jpeg" alt="Fireworks lighting up the night sky" />
+                <figcaption>Bikers Carnival</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="assets/images/miss-africa.jpg" alt="Fireworks lighting up the night sky" />
+                <figcaption>Miss Africa</figcaption>
+            </figure>
         </section>
     </main>
+
     <footer class="main-footer">
         <p>&copy; 2025 Experience Calabar. All rights reserved.</p>
         <div class="footer-links">
