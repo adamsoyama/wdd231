@@ -1,0 +1,508 @@
+/* ========== :ROOT THEME VARIABLES ========== */
+:root {
+    --royal-indigo: #1A237E;
+    /* Primary (Deep Indigo Blue) */
+    --warm-sienna: #D2691E;
+    /* Secondary/Accents (Earthy Orange) */
+    --sunlit-amber: #FFB300;
+    /* CTA Highlights (Golden Amber) */
+    --forest-jade: #004D40;
+    /* Footer / Secondary Buttons (Rich Teal) */
+    --soft-ivory: #FFF8E1;
+    /* Light Backgrounds (Warm Ivory) */
+    --off-white: #FAFAFA;
+    /* Neutral Background / Light Elements */
+    --ebony: #1B1B1B;
+    /* Main Body Text (Deep Charcoal) */
+    --slate-gray: #B0BEC5;
+    /* Borders / Dividers (Cool Gray) */
+    --border-contrast: #888888;
+    /* Optional high-contrast outlines */
+
+    --font-main: 'Poppins', sans-serif;
+    --transition-default: all 0.3s ease-in-out;
+}
+
+/* ========== CSS RESET & BASE ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--ebony);
+    background-color: white;
+    line-height: 1.6;
+}
+
+/* ========== GLOBAL UTILITY CLASSES ========== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.cta-button {
+    background-color: var(--sunlit-amber);
+    /* Golden CTA */
+    color: var(--royal-indigo);
+    /* High-contrast text */
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 2rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: var(--transition-default);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+    background-color: var(--warm-sienna);
+    /* Earthy warm accent on hover */
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* ========== GLOBAL ANIMATIONS ========== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+/* ========== RESPONSIVE TYPOGRAPHY ========== */
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: var(--royal-indigo);
+    /* Updated from --deep-indigo */
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    color: var(--ebony);
+    /* Ensures strong contrast for body text */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    /* Inherits from parent; hover effects can override */
+}
+
+/* Responsive Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ========== HEADER STYLING ========== */
+.main-header {
+    background-color: var(--forest-jade);
+    /* Updated from --calabar-green */
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Logo */
+.logo {
+    height: 60px;
+    width: auto;
+    transition: var(--transition-default);
+}
+
+/* NAVIGATION */
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav a {
+    color: var(--off-white);
+    /* White text on dark header = high contrast */
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: var(--transition-default);
+    position: relative;
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--sunlit-amber);
+    /* Gold underline */
+    transition: width 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+    color: var(--sunlit-amber);
+    /* Gold on hover */
+    background-color: rgba(255, 179, 0, 0.15);
+    /* Light gold hover bg */
+}
+
+.main-nav a:hover::after,
+.main-nav a:focus::after {
+    width: 100%;
+}
+
+/* Menu Toggle (Hamburger) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    margin-left: auto;
+    transition: var(--transition-default);
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--off-white);
+    border-radius: 2px;
+    transition: var(--transition-default);
+}
+
+/* Rotate for open state (optional animation) */
+.menu-toggle.open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive Nav (Mobile First Toggle Placeholder — optional) */
+@media (max-width: 768px) {
+    .main-nav ul {
+        flex-direction: column;
+        background-color: var(--royal-indigo);
+        /* Deep, accessible indigo */
+        width: 100%;
+        margin-top: 1rem;
+        display: none;
+        /* To be toggled via JS */
+    }
+
+    .main-nav.active ul {
+        display: flex;
+    }
+
+    /* Show toggle on small screens */
+    .menu-toggle {
+        display: flex;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        background-color: var(--ebony);
+        width: 100%;
+        padding: 1rem 0;
+        border-radius: 0.5rem;
+    }
+
+    .main-nav {
+        width: 100%;
+    }
+}
+
+/* ========== ABOUT PAGE STYLES ========== */
+
+.about-main {
+    padding: 2rem 1rem;
+    background-color: var(--soft-ivory);
+    color: var(--ebony);
+}
+
+.about-hero {
+    text-align: center;
+    background-image: url('../assets/images/why-calabar.jpg');
+    /* Ensure correct path */
+    background-size: cover;
+    /* Ensures full coverage */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents tiling */
+    background-attachment: fixed;
+    /* Keeps the background static */
+    color: var(--off-white);
+    /* Ensures high contrast */
+    padding: 5rem 3rem;
+    /* Expanded padding for better spacing */
+    border-radius: 1rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    /* Increased depth */
+    position: relative;
+    /* For overlay effects */
+}
+
+/* Optional dark overlay for text clarity */
+.about-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 35, 126, 0.2);
+    /* Semi-transparent overlay */
+    border-radius: 1rem;
+}
+
+/* Ensure text stays visible */
+.about-hero h2,
+.about-hero p {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Adjust responsiveness for mobile */
+@media (max-width: 768px) {
+    .about-hero {
+        background-size: contain;
+        /* Adjusts scaling for smaller screens */
+        padding: 3rem 2rem;
+    }
+
+    .about-hero h2 {
+        font-size: 2rem;
+        /* Slightly smaller heading */
+    }
+
+    .about-hero p {
+        font-size: 1rem;
+        /* Maintain readability */
+    }
+}
+
+.about-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.about-hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Grid Layout Sections */
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    align-items: center;
+    margin: 3rem 0;
+    padding: 0 1rem;
+}
+
+.grid-layout.reverse {
+    direction: rtl;
+}
+
+.grid-layout.reverse .about-text,
+.grid-layout.reverse .about-image {
+    direction: ltr;
+}
+
+/* Text & Image Blocks */
+.about-text h2 {
+    color: var(--royal-indigo);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    line-height: 1.8;
+    color: var(--ebony);
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-image img:hover {
+    transform: scale(1.03);
+}
+
+/* CTA Section */
+.about-cta {
+    text-align: center;
+    margin: 4rem 0 2rem;
+}
+
+.cta-button {
+    background-color: var(--sunlit-amber);
+    color: var(--royal-indigo);
+    padding: 0.75rem 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 3rem;
+    text-decoration: none;
+    transition: var(--transition-default);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+    background-color: var(--warm-sienna);
+    color: var(--off-white);
+}
+
+@media (max-width: 768px) {
+    .about-hero h1 {
+        font-size: 2rem; /* Reduce heading size for better fit */
+        margin-bottom: 0.75rem;
+    }
+
+    .about-hero p {
+        font-size: 1rem; /* Adjust paragraph font size */
+        max-width: 90%; /* Ensure proper width scaling */
+    }
+
+    /* Responsive Grid Layout */
+    .grid-layout {
+        grid-template-columns: 1fr; /* Switch to a single column layout */
+        gap: 1.5rem; /* Reduce gap for better spacing */
+        padding: 0.5rem;
+    }
+
+    .grid-layout.reverse {
+        direction: ltr; /* Reset direction for mobile */
+    }
+
+    /* Text & Image Adjustments */
+    .about-text h2 {
+        font-size: 1.75rem; /* Slightly smaller heading */
+        margin-bottom: 0.75rem;
+    }
+
+    .about-text p {
+        font-size: 1rem; /* Improve readability */
+        line-height: 1.6;
+    }
+
+    .about-image img {
+        border-radius: 1rem; /* Reduce border radius for consistency */
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+    }
+
+    /* CTA Section */
+    .about-cta {
+        margin: 3rem 0 1.5rem;
+    }
+
+    .cta-button {
+        font-size: 1rem; /* Slightly smaller button text */
+        padding: 0.6rem 1.5rem; /* Adjust padding */
+        border-radius: 2rem; /* Maintain consistency */
+    }
+}
+
+/* Footer Section */
+.main-footer {
+    background-color: var(--forest-jade);
+    color: white;
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1.25rem 1rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    font-family: var(--font-main);
+}
+
+.main-footer p {
+    margin: 0.4rem 0;
+    font-weight: 400;
+    color: white;
+}
+
+.main-footer .footer-links {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+}
+
+.main-footer .footer-links a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.main-footer .footer-links a:hover {
+    color: #FFB300;
+}
+
+.main-footer a[href^="mailto:"] {
+    color: white;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.main-footer a[href^="mailto:"]:hover {
+    color: var(--soft-ivory);
+}
