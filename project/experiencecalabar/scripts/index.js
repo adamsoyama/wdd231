@@ -10,11 +10,15 @@ document.addEventListener("DOMContentLoaded", () => {
 // ==========================
 // Utility Functions
 // ==========================
-
 const fetchJSON = async (url) => {
-  const res = await fetch(url);
-  if (!res.ok) throw new Error(`Failed to fetch ${url}`);
-  return res.json();
+  try {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`Failed to fetch ${url}`);
+    return res.json();
+  } catch (err) {
+    console.error(`Error fetching data from ${url}:`, err);
+    return [];
+  }
 };
 
 const createEl = (tag, classNames = [], innerHTML = "") => {
@@ -24,10 +28,7 @@ const createEl = (tag, classNames = [], innerHTML = "") => {
   return el;
 };
 
-const getRandomItems = (arr, count) => {
-  const shuffled = [...arr].sort(() => 0.5 - Math.random());
-  return shuffled.slice(0, count);
-};
+const getRandomItems = (arr, count) => [...arr].sort(() => 0.5 - Math.random()).slice(0, count);
 
 const setTextIfEl = (id, text) => {
   const el = document.getElementById(id);
@@ -37,7 +38,6 @@ const setTextIfEl = (id, text) => {
 // ==========================
 // Date-based Utilities
 // ==========================
-
 function renderCurrentYear() {
   setTextIfEl("year", new Date().getFullYear());
 }
@@ -49,29 +49,19 @@ function renderLastModified() {
 // ==========================
 // Weather Widget
 // ==========================
-
 async function initWeather() {
-  const apiKey = "e48c654b35fed95c19c7d2c727934cce"; // Replace with your actual key
+  const apiKey = "e48c654b35fed95c19c7d2c727934cce";
   const city = "Calabar";
   const weatherEl = document.getElementById("weather-widget");
 
   try {
-    const data = await fetchJSON(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
-    );
-
-    const { temp, feels_like } = data.main;
+    const data = await fetchJSON(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`);
+    const { temp, feels_like, humidity } = data.main;
     const { description, icon } = data.weather[0];
-    const { humidity } = data.main;
     const { speed: wind } = data.wind;
     const { country } = data.sys;
 
-    const weatherTip =
-      temp >= 30
-        ? "It's hot and festive – pack light!"
-        : temp >= 20
-          ? "Perfect weather for carnival vibes!"
-          : "Cool breeze – bring a light jacket.";
+    const weatherTip = temp >= 30 ? "It's hot and festive – pack light!" : temp >= 20 ? "Perfect weather for carnival vibes!" : "Cool breeze – bring a light jacket.";
 
     weatherEl.innerHTML = `
       <div class="weather-top">
@@ -83,23 +73,20 @@ async function initWeather() {
         </div>
       </div>
       <ul class="weather-details">
-        <li>💧 Humidity: ${humidity}%</li>
-        <li>🌬️ Wind: ${wind} m/s</li>
-        <li>🧳 Tip: ${weatherTip}</li>
+        <p>💧 Humidity: ${humidity}%</p>
+        <p>🌬️ Wind: ${wind} m/s</p>
+        <p>🧳 Tip: ${weatherTip}</p>
       </ul>
     `;
-
     weatherEl.classList.add("weather-loaded");
   } catch (err) {
     weatherEl.textContent = "Weather info unavailable at the moment.";
-    console.error("Weather fetch error:", err);
   }
 }
 
 // ==========================
 // Countdown Timer
 // ==========================
-
 function initCountdown() {
   const countdownEl = document.getElementById("countdown");
   const targetDate = new Date("2025-12-28T12:00:00");
@@ -120,9 +107,7 @@ function initCountdown() {
     const minutes = Math.floor((diff / (1000 * 60)) % 60);
     const seconds = Math.floor((diff / 1000) % 60);
 
-    countdownEl.textContent = `${pad(days)}d ${pad(hours)}h ${pad(
-      minutes
-    )}m ${pad(seconds)}s`;
+    countdownEl.textContent = `${pad(days)}d ${pad(hours)}h ${pad(minutes)}m ${pad(seconds)}s`;
   };
 
   updateCountdown();
@@ -132,81 +117,82 @@ function initCountdown() {
 // ==========================
 // Featured Events
 // ==========================
-
 async function loadFeaturedEvents() {
   const container = document.querySelector(".event-cards");
-
   if (!container) return;
 
   try {
     const events = await fetchJSON("data/events.json");
-    const topEvents = events.slice(0, 3);
 
-    container.innerHTML = "";
-
-    topEvents.forEach((event) => {
-      const image = event.image || "assets/images/default-event.jpg";
-
-      const card = createEl("div", ["event-card"], `
-        <img src="${image}" alt="${event.title}" loading="lazy" />
+    container.innerHTML = events.slice(0, 3).map(event => `
+      <div class="event-card">
+        <img src="${event.image || 'assets/images/default-event.jpg'}" alt="${event.title}" loading="lazy" />
         <h3>${event.title}</h3>
         <p>${event.date}</p>
         <p>${event.description}</p>
-      `);
+        <button class="save-event">⭐ Save Event</button>
+      </div>
+    `).join("");
 
-      container.appendChild(card);
+    container.querySelectorAll(".save-event").forEach((btn, index) => {
+      btn.addEventListener("click", () => saveEventToLocal(events[index], btn));
     });
+
   } catch (err) {
     container.innerHTML = "<p>Unable to load events at the moment.</p>";
-    console.error("Events fetch error:", err);
   }
 }
 
 // ==========================
 // Spotlight Experiences
 // ==========================
-
 async function loadSpotlightExperiences() {
-  const spotlightContainer = document.querySelector(".spotlight-cards");
-
-  if (!spotlightContainer) return;
+  const container = document.querySelector(".spotlight-cards");
+  if (!container) return;
 
   try {
     const spots = await fetchJSON("data/spotlights.json");
     const selected = getRandomItems(spots, 3);
 
-    spotlightContainer.innerHTML = "";
-
-    selected.forEach((spot) => {
-      const card = createEl("div", ["spotlight-card"], `
+    container.innerHTML = selected.map(spot => `
+      <div class="spotlight-card">
         <img src="${spot.image}" alt="${spot.name}" loading="lazy" />
-        <div class="spotlight-info">
-          <h3>${spot.name}</h3>
-          <p>${spot.address}</p>
-        </div>
-      `);
-
-      spotlightContainer.appendChild(card);
-    });
-
-    const galleryLink = createEl("div", ["view-gallery"], `
-      <a href="gallery.html" class="cta-button">🎉 View Full Gallery</a>
-    `);
-    spotlightContainer.appendChild(galleryLink);
+        <h3>${spot.name}</h3>
+        <p>${spot.address}</p>
+      </div>
+    `).join("");
   } catch (err) {
-    spotlightContainer.innerHTML =
-      "<p>Unable to load spotlight experiences.</p>";
-    console.error("Spotlight fetch error:", err);
+    container.innerHTML = "<p>Unable to load spotlight experiences.</p>";
   }
 }
 
-const toggleButton = document.querySelector('.menu-toggle');
-const nav = document.querySelector('.main-nav');
+// ==========================
+// Save Event Functionality
+// ==========================
+function saveEventToLocal(event, button) {
+  let savedEvents = JSON.parse(localStorage.getItem("savedEvents")) || [];
 
-toggleButton.addEventListener('click', () => {
-  nav.classList.toggle('active');
-  toggleButton.classList.toggle('open');
+  if (!savedEvents.some(e => e.title === event.title)) {
+    savedEvents.push(event);
+    localStorage.setItem("savedEvents", JSON.stringify(savedEvents));
 
-  const expanded = toggleButton.getAttribute('aria-expanded') === 'true';
-  toggleButton.setAttribute('aria-expanded', !expanded);
+    button.textContent = "✅ Saved";
+    button.classList.add("saved");
+    button.disabled = true;
+  }
+}
+
+// ==========================
+// Mobile Navigation Toggle
+// ==========================
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const mainNav = document.querySelector(".main-nav");
+
+  if (menuToggle && mainNav) {
+    menuToggle.addEventListener("click", () => {
+      mainNav.classList.toggle("active");
+      menuToggle.classList.toggle("active");
+    });
+  }
 });

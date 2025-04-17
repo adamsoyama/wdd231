@@ -1,29 +1,21 @@
-/* ========== :ROOT THEME VARIABLES ========== */
+/* Global Styles */
 :root {
-    --royal-indigo: #1A237E;
-    /* Primary (Deep Indigo Blue) */
-    --warm-sienna: #D2691E;
-    /* Secondary/Accents (Earthy Orange) */
-    --sunlit-amber: #FFB300;
-    /* CTA Highlights (Golden Amber) */
-    --forest-jade: #004D40;
-    /* Footer / Secondary Buttons (Rich Teal) */
-    --soft-ivory: #FFF8E1;
-    /* Light Backgrounds (Warm Ivory) */
-    --off-white: #FAFAFA;
-    /* Neutral Background / Light Elements */
-    --ebony: #1B1B1B;
-    /* Main Body Text (Deep Charcoal) */
-    --slate-gray: #B0BEC5;
-    /* Borders / Dividers (Cool Gray) */
-    --border-contrast: #888888;
-    /* Optional high-contrast outlines */
-
-    --font-main: 'Poppins', sans-serif;
-    --transition-default: all 0.3s ease-in-out;
+    --primary-color: #D8262D;
+    /* Vibrant African red */
+    --secondary-color: #FF9F1C;
+    /* Sunset orange */
+    --accent-color: #008C45;
+    /* Deep green */
+    --dark-bg: #152238;
+    /* Rich navy for contrast */
+    --light-bg: #F4EDE4;
+    /* Soft neutral for readability */
+    --text-light: #FFFFFF;
+    --text-dark: #222;
+    --hover-color: #FFD700;
+    /* Gold for highlight effects */
 }
 
-/* ========== CSS RESET & BASE ========== */
 * {
     margin: 0;
     padding: 0;
@@ -36,98 +28,22 @@ html {
 }
 
 body {
-    font-family: var(--font-main);
-    color: var(--ebony);
-    background-color: white;
-    line-height: 1.6;
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
 }
 
-/* ========== GLOBAL UTILITY CLASSES ========== */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
-
-.cta-button {
-    background-color: var(--sunlit-amber);
-    /* Golden CTA */
-    color: var(--royal-indigo);
-    /* High-contrast text */
-    font-weight: 600;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 2rem;
-    text-decoration: none;
-    display: inline-block;
-    transition: var(--transition-default);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.cta-button:hover {
-    background-color: var(--warm-sienna);
-    /* Earthy warm accent on hover */
-    color: #fff;
-    transform: scale(1.05);
-}
-
-/* ========== GLOBAL ANIMATIONS ========== */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.fade-in-up {
-    animation: fadeInUp 0.6s ease forwards;
-}
-
-/* ========== RESPONSIVE TYPOGRAPHY ========== */
-h1,
-h2,
-h3,
-h4,
-h5 {
-    color: var(--royal-indigo);
-    /* Updated from --deep-indigo */
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-}
-
-p {
-    margin-bottom: 1rem;
-    color: var(--ebony);
-    /* Ensures strong contrast for body text */
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-    /* Inherits from parent; hover effects can override */
-}
-
-/* Responsive Images */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* ========== HEADER STYLING ========== */
 .main-header {
-    background-color: var(--forest-jade);
-    /* Updated from --calabar-green */
-    padding: 1rem 0;
+    background: #152238;
+    color: var(--text-light);
+    padding: 1.5rem;
     position: sticky;
     top: 0;
+    width: 100%;
     z-index: 1000;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    animation: slideDown 1s ease-out;
 }
 
 .nav-container {
@@ -139,370 +55,308 @@ img {
 
 /* Logo */
 .logo {
-    height: 60px;
-    width: auto;
-    transition: var(--transition-default);
+    width: 80px;
+    animation: fadeIn 1.2s ease-in;
 }
 
-/* NAVIGATION */
+/* Navigation */
 .main-nav ul {
     list-style: none;
     display: flex;
-    gap: 2rem;
+    gap: 20px;
     align-items: center;
     padding: 0;
     margin: 0;
 }
 
 .main-nav a {
-    color: var(--off-white);
-    /* White text on dark header = high contrast */
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    transition: var(--transition-default);
-    position: relative;
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: 0.3s ease-in-out;
 }
 
-.main-nav a::after {
-    content: '';
-    position: absolute;
-    bottom: 4px;
-    left: 0;
-    width: 0%;
-    height: 2px;
-    background-color: var(--sunlit-amber);
-    /* Gold underline */
-    transition: width 0.3s ease;
+.main-nav a:hover {
+    background: var(--hover-color);
+    color: var(--text-dark);
+    border-radius: 15px;
 }
 
-.main-nav a:hover,
-.main-nav a:focus {
-    color: var(--sunlit-amber);
-    /* Gold on hover */
-    background-color: rgba(255, 179, 0, 0.15);
-    /* Light gold hover bg */
-}
-
-.main-nav a:hover::after,
-.main-nav a:focus::after {
-    width: 100%;
-}
-
-/* Menu Toggle (Hamburger) */
+/* Hamburger Menu for Small Screens */
 .menu-toggle {
     display: none;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-    background: none;
+    background: transparent;
     border: none;
+    font-size: 1.8rem;
     cursor: pointer;
-    padding: 0.5rem;
-    margin-left: auto;
-    transition: var(--transition-default);
+    color: var(--text-light);
+    transition: 0.3s ease-in-out;
 }
 
-.menu-toggle .bar {
-    width: 25px;
-    height: 3px;
-    background-color: var(--off-white);
-    border-radius: 2px;
-    transition: var(--transition-default);
+.menu-toggle:hover {
+    color: var(--hover-color);
 }
 
-/* Rotate for open state (optional animation) */
-.menu-toggle.open .bar:nth-child(1) {
+.menu-toggle span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: var(--text-light);
+    margin: 6px auto;
+    transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+
+/* When Menu is Active (X Close Animation) */
+.menu-toggle.active span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
 }
 
-.menu-toggle.open .bar:nth-child(2) {
+.menu-toggle.active span:nth-child(2) {
     opacity: 0;
 }
 
-.menu-toggle.open .bar:nth-child(3) {
+.menu-toggle.active span:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Responsive Nav (Mobile First Toggle Placeholder — optional) */
+
+/* MEDIA QUERIES */
+/* Mobile screens: max-width 768px */
 @media (max-width: 768px) {
+    .main-header {
+        padding: 1rem;
+    }
+
+    .logo {
+        width: 60px;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+        cursor: pointer;
+    }
+
     .main-nav ul {
-        flex-direction: column;
-        background-color: var(--royal-indigo);
-        /* Deep, accessible indigo */
-        width: 100%;
-        margin-top: 1rem;
         display: none;
-        /* To be toggled via JS */
+        position: absolute;
+        right: 0;
+        background: rgba(21, 34, 56, 1);
+        flex-direction: column;
+        width: 150px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+        top: 60px;
+        animation: slideIn 0.6s ease-in;
     }
 
     .main-nav.active ul {
         display: flex;
+        /* Make it visible when active */
     }
 
-    /* Show toggle on small screens */
-    .menu-toggle {
-        display: flex;
+    .main-nav a {
+        display: block;
+        padding: 5px;
+        color: var(--text-light);
+        font-size: 0.8rem;
+        text-decoration: none;
     }
 
-    .main-nav ul {
-        flex-direction: column;
-        background-color: var(--ebony);
-        width: 100%;
-        padding: 1rem 0;
-        border-radius: 0.5rem;
-    }
-
-    .main-nav {
-        width: 100%;
+    .main-nav a:hover {
+        background: var(--hover-color);
+        color: var(--text-dark);
     }
 }
 
-/* ========== ABOUT PAGE STYLES ========== */
-
+/* About Page Main Section */
 .about-main {
-    padding: 2rem 1rem;
-    background-color: var(--soft-ivory);
-    color: var(--ebony);
-}
-
-.about-hero {
+    background: var(--light-bg);
+    color: var(--text-dark);
+    padding: 4rem 2rem;
     text-align: center;
-    background-image: url('../assets/images/why-calabar.jpg');
-    /* Ensure correct path */
-    background-size: cover;
-    /* Ensures full coverage */
-    background-position: center;
-    /* Centers the image */
-    background-repeat: no-repeat;
-    /* Prevents tiling */
-    background-attachment: fixed;
-    /* Keeps the background static */
-    color: var(--off-white);
-    /* Ensures high contrast */
-    padding: 5rem 3rem;
-    /* Expanded padding for better spacing */
-    border-radius: 1rem;
-    margin-bottom: 3rem;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-    /* Increased depth */
-    position: relative;
-    /* For overlay effects */
 }
 
-/* Optional dark overlay for text clarity */
-.about-hero::before {
+/* Hero Banner */
+.about-hero {
+    background: url('../assets/images/men.jpeg');
+    background-size: cover;
+    /* Image covers the section */
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 4rem 2rem;
+    text-align: center;
+    color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    animation: fadeInHero 1s ease-in-out;
+    border-radius: 15px;
+    /* Adds smooth edges */
+}
+
+/* Ensure the image doesn't disappear */
+.about-hero::after {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(26, 35, 126, 0.2);
-    /* Semi-transparent overlay */
-    border-radius: 1rem;
+    inset: 0;
+    background: url('../assets/images/men.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.85;
+    z-index: -1;
+    border-radius: 15px;
+    /* Applies rounded edges */
 }
 
-/* Ensure text stays visible */
-.about-hero h2,
+
+.about-hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
 .about-hero p {
-    position: relative;
-    z-index: 2;
+    font-size: 1.3rem;
     max-width: 800px;
     margin: 0 auto;
 }
 
-/* Adjust responsiveness for mobile */
-@media (max-width: 768px) {
-    .about-hero {
-        background-size: contain;
-        /* Adjusts scaling for smaller screens */
-        padding: 3rem 2rem;
-    }
-
-    .about-hero h2 {
-        font-size: 2rem;
-        /* Slightly smaller heading */
-    }
-
-    .about-hero p {
-        font-size: 1rem;
-        /* Maintain readability */
-    }
-}
-
-.about-hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.about-hero p {
-    font-size: 1.2rem;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-/* Grid Layout Sections */
+/* Grid Layout */
 .grid-layout {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
     align-items: center;
-    margin: 3rem 0;
-    padding: 0 1rem;
+    padding: 3rem 2rem;
 }
 
+/* Reverse Grid Layout */
 .grid-layout.reverse {
-    direction: rtl;
+    grid-template-columns: 1fr 1fr;
+    flex-direction: row-reverse;
 }
 
-.grid-layout.reverse .about-text,
-.grid-layout.reverse .about-image {
-    direction: ltr;
+/* About Text */
+.about-text {
+    text-align: left;
 }
 
-/* Text & Image Blocks */
 .about-text h2 {
-    color: var(--royal-indigo);
     font-size: 2rem;
     margin-bottom: 1rem;
+    color: var(--text-dark);
 }
 
 .about-text p {
     font-size: 1.1rem;
-    margin-bottom: 1rem;
-    line-height: 1.8;
-    color: var(--ebony);
+    margin-bottom: 15px;
 }
 
+/* About Image */
 .about-image img {
     width: 100%;
-    border-radius: 1.5rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.about-image img:hover {
-    transform: scale(1.03);
-}
-
-/* CTA Section */
+/* Call to Action */
 .about-cta {
-    text-align: center;
-    margin: 4rem 0 2rem;
+    margin-top: 3rem;
 }
 
-.cta-button {
-    background-color: var(--sunlit-amber);
-    color: var(--royal-indigo);
-    padding: 0.75rem 2rem;
+.about-cta .cta-button {
+    display: inline-block;
+    background: var(--hover-color);
+    color: var(--text-dark);
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 1.2rem;
     font-weight: bold;
-    font-size: 1.1rem;
-    border-radius: 3rem;
+    transition: 0.3s ease-in-out;
     text-decoration: none;
-    transition: var(--transition-default);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.cta-button:hover {
-    background-color: var(--warm-sienna);
-    color: var(--off-white);
+.about-cta .cta-button:hover {
+    background: var(--primary-color);
+    color: var(--text-light);
 }
 
+/* Animations */
+@keyframes fadeInHero {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
+    .grid-layout, .grid-layout.reverse {
+        display: block;
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .about-hero {
+        padding: 4rem 1rem;
+    }
+
     .about-hero h1 {
-        font-size: 2rem; /* Reduce heading size for better fit */
-        margin-bottom: 0.75rem;
+        font-size: 2.2rem;
     }
 
     .about-hero p {
-        font-size: 1rem; /* Adjust paragraph font size */
-        max-width: 90%; /* Ensure proper width scaling */
-    }
-
-    /* Responsive Grid Layout */
-    .grid-layout {
-        grid-template-columns: 1fr; /* Switch to a single column layout */
-        gap: 1.5rem; /* Reduce gap for better spacing */
-        padding: 0.5rem;
-    }
-
-    .grid-layout.reverse {
-        direction: ltr; /* Reset direction for mobile */
-    }
-
-    /* Text & Image Adjustments */
-    .about-text h2 {
-        font-size: 1.75rem; /* Slightly smaller heading */
-        margin-bottom: 0.75rem;
-    }
-
-    .about-text p {
-        font-size: 1rem; /* Improve readability */
-        line-height: 1.6;
+        font-size: 1.1rem;
     }
 
     .about-image img {
-        border-radius: 1rem; /* Reduce border radius for consistency */
-        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08); /* Subtle shadow */
-    }
-
-    /* CTA Section */
-    .about-cta {
-        margin: 3rem 0 1.5rem;
-    }
-
-    .cta-button {
-        font-size: 1rem; /* Slightly smaller button text */
-        padding: 0.6rem 1.5rem; /* Adjust padding */
-        border-radius: 2rem; /* Maintain consistency */
+        max-width: 100%;
     }
 }
 
-/* Footer Section */
+/* Footer */
 .main-footer {
-    background-color: var(--forest-jade);
-    color: white;
+    background: #152238;
+    /* Matching deep navy */
+    color: var(--text-light);
     text-align: center;
-    margin-top: 2rem;
-    padding: 1.25rem 1rem;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    font-family: var(--font-main);
+    padding: 20px;
 }
 
-.main-footer p {
-    margin: 0.4rem 0;
-    font-weight: 400;
-    color: white;
-}
-
-.main-footer .footer-links {
-    margin: 1rem 0;
-    display: flex;
-    justify-content: center;
-    gap: 1.2rem;
-    flex-wrap: wrap;
-}
-
-.main-footer .footer-links a {
-    color: #FFFFFF;
+.footer-links a {
+    color: var(--text-light);
+    margin: 0 10px;
     text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-    font-size: 0.95rem;
+    font-size: 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
 }
 
-.main-footer .footer-links a:hover {
-    color: #FFB300;
+.footer-links a:hover {
+    color: var(--hover-color);
 }
 
-.main-footer a[href^="mailto:"] {
-    color: white;
-    font-weight: 500;
-    text-decoration: underline;
+.footer-links i {
+    font-size: 1.5rem;
 }
 
-.main-footer a[href^="mailto:"]:hover {
-    color: var(--soft-ivory);
+.footer-contact a {
+    color: var(--secondary-color)
+}
+
+.footer-contact a:hover {
+    color: var(--accent-color)
 }

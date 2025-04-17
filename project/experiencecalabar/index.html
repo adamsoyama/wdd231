@@ -10,7 +10,7 @@
     <meta name="keywords"
         content="Calabar Carnival, Nigeria Tourism, African Culture, Street Party, Calabar Events, Travel Nigeria, Carnival 2025">
 
-    <!-- Open Graph -->
+    <!-- Open Graph  & Twitter Cards for better social media preview -->
     <meta property="og:title" content="Experience Calabar Carnival 2025">
     <meta property="og:description"
         content="Plan your trip, explore events, and experience the joy of Africa's biggest street party!">
@@ -19,39 +19,50 @@
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_NG">
 
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Experience Calabar Carnival 2025">
+    <meta name="twitter:description"
+        content="Plan your trip, explore events, and experience the joy of Africa's biggest street party!">
+    <meta name="twitter:image" content="assets/images/carnival-main.jpg">
+
     <!-- Theme & Manifest -->
     <meta name="theme-color" content="#003377">
     <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
 
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "TouristDestination",
-    "name": "Experience Calabar Carnival 2025",
-    "url": "https://experiencecalabar.ng",
-    "description": "Official tourism site for the Calabar Carnival – discover events, book your trip, and experience Africa's biggest street party.",
-    "image": "https://experiencecalabar.ng/assets/images/carnival-main.jpg",
-    "touristType": "Festival lovers, cultural explorers, global tourists",
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "4.9757",
-      "longitude": "8.3417"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Calabar",
-      "addressCountry": "NG"
-    },
-    "sameAs": [
-      "https://facebook.com/calabarcarnival",
-      "https://instagram.com/experiencecalabar",
-      "https://twitter.com/calabarcarnival"
-    ]
-  }
-  </script>
+    <!-- Favicon enhancements -->
+    <link rel="icon" href="assets/icons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
 
-    <title>Experience Calabar Carnival 2025</title>
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Event",
+            "name": "Calabar Carnival 2025",
+            "startDate": "2025-12-01",
+            "endDate": "2025-12-31",
+            "url": "https://experiencecalabar.ng",
+            "location": {
+                "@type": "Place",
+                "name": "Calabar, Nigeria",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Calabar",
+                    "addressCountry": "NG"
+                }
+            },
+            "organizer": {
+                "@type": "Organization",
+                "name": "Calabar Tourism Board",
+                "url": "https://experiencecalabar.ng"
+            },
+            "image": "https://experiencecalabar.ng/assets/images/carnival-main.jpg",
+            "description": "The Calabar Carnival is Africa’s biggest street party with vibrant parades, cultural showcases, and exciting events."
+        }
+        </script>
+
+    <title>Experience Calabar Carnival 2025 - Homepage</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -61,13 +72,10 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="all">
 
-    <!-- Favicon -->
-    <link rel="icon" href="assets/icons/favicon.ico">
-
     <!-- Preload Hero Image -->
     <link rel="preload" as="image" href="assets/images/carnival-main.jpg" type="image/jpeg">
 
-    <!-- Styles -->
+    <!-- Styles and Scripts-->
     <link rel="stylesheet" href="styles/index.css">
     <script src="scripts/index.js" defer></script>
 </head>
@@ -76,11 +84,11 @@
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <header class="main-header">
-        <div class="container nav-container">
+        <div class="nav-container">
             <img src="assets/icons/logo.png" alt="Experience Calabar Logo" class="logo" loading="eager" width="80">
 
             <!-- Menu Toggle Button -->
-            <button class="menu-toggle" aria-label="Toggle Navigation" aria-expanded="false">
+            <button class="menu-toggle" aria-label="Toggle Navigation" aria-expanded="false" aria-controls="main-nav">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -99,19 +107,13 @@
         </div>
     </header>
 
-
     <main id="main-content" tabindex="-1">
         <section class="hero-section">
-            <div class="hero-slideshow" aria-hidden="true">
-                <img src="assets/images/carnival-main.jpg" alt="carnival calabar" loading="lazy">
-                <img src="assets/images/calabar_carnival_2.jpg" alt="carnival calabar" loading="lazy">
-                <img src="assets/images/cultural-carnival.jpg" alt="carnival calabar" loading="lazy">
-            </div>
             <h1>Experience the Magic of Calabar Carnival</h1>
-            <div class="hero-weather" id="weather-widget" aria-label="Live Weather">
+            <div class="hero-weather" id="weather-widget" aria-label="Live Weather" aria-live="polite">
                 <!-- Injected dynamically -->
             </div>
-            <div id="countdown" class="countdown-timer" aria-live="polite">00:00:00</div>
+            <div id="countdown" aria-live="polite">00:00:00</div>
             <a href="#events" class="cta-button">Explore Events</a>
         </section>
 
@@ -154,23 +156,21 @@
             </div>
         </section>
 
-        <section id="about" class="about-section" aria-labelledby="about-heading">
-            <div class="about-left">
-                <h2 id="about-heading">Why Calabar?</h2>
-                <img src="assets/images/why-calabar.jpg" alt="Calabar Carnival Celebration" loading="lazy" width="600">
-            </div>
-            <div class="about-right">
-                <h3>About Calabar Carnival</h3>
-                <p>Learn about the rich history, cultural groups, and international participation that make Calabar
-                    Carnival the pride of Africa.</p>
-                <a href="about.html" class="learn-more">Learn More</a>
-            </div>
+        <section id="about" class="about-section">
+            <h2>Why Calabar?</h2>
+            <img src="assets/images/why-calabar.jpg" alt="Calabar Carnival Celebration" loading="lazy" width="600">
+            <h3>About Calabar Carnival</h3>
+            <p>Learn about the rich history, cultural groups, and international participation that make Calabar Carnival
+                the pride of Africa.</p>
+            <a href="about.html">Learn More</a>
         </section>
+
         <section id="newsletter" class="newsletter-section" aria-labelledby="newsletter-heading">
-            <h2 id="newsletter-heading">Stay Updated</h2>
+            <h2>Stay Updated</h2>
             <form action="#" method="post" class="newsletter-form">
-                <label for="email" class="visually-hidden">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+                <label for="email" class="visually-hidden"></label>
+                <input type="email" id="email" name="email" placeholder="Your Email Address" required
+                    aria-label="Email Address">
                 <button type="submit">Subscribe</button>
             </form>
         </section>
@@ -179,11 +179,23 @@
     <footer class="main-footer">
         <p>&copy; 2025 Experience Calabar. All rights reserved.</p>
         <div class="footer-links">
-            <a href="https://facebook.com/calabarcarnival">Facebook</a>
-            <a href="https://instagram.com/experiencecalabar">Instagram</a>
-            <a href="https://twitter.com/calabarcarnival">Twitter</a>
+            <a href="https://facebook.com/calabarcarnival" aria-label="Facebook">
+                <i class="fab fa-facebook"></i> <span>Facebook</span>
+            </a>
+            <a href="https://instagram.com/experiencecalabar" aria-label="Instagram">
+                <i class="fab fa-instagram"></i> <span>Instagram</span>
+            </a>
+            <a href="https://twitter.com/calabarcarnival" aria-label="Twitter">
+                <i class="fab fa-twitter"></i> <span>Twitter</span>
+            </a>
+            <a href="https://youtube.com/calabarcarnival" aria-label="YouTube">
+                <i class="fab fa-youtube"></i> <span>YouTube</span>
+            </a>
         </div>
-        <p>Contact us: <a href="mailto:info@experiencecalabar.ng">info@experiencecalabar.ng</a></p>
+        <div class="footer-contact">
+            <p>Contact us: <a href="mailto:info@experiencecalabar.ng">info@experiencecalabar.ng</a></p>
+            <p><a href="attributions.html">Attributions</a></p>
+        </div>
     </footer>
 </body>
 
