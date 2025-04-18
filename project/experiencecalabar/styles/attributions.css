@@ -1,0 +1,323 @@
+/* Global Styles */
+:root {
+    --primary-color: #D8262D;
+    /* Vibrant African red */
+    --secondary-color: #FF9F1C;
+    /* Sunset orange */
+    --accent-color: #008C45;
+    /* Deep green */
+    --dark-bg: #152238;
+    /* Rich navy for contrast */
+    --light-bg: #F4EDE4;
+    /* Soft neutral for readability */
+    --text-light: #FFFFFF;
+    --text-dark: #222;
+    --hover-color: #FFD700;
+    /* Gold for highlight effects */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+}
+
+.main-header {
+    background: #152238;
+    color: var(--text-light);
+    padding: 1.5rem;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    animation: slideDown 1s ease-out;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Logo */
+.logo {
+    width: 80px;
+    animation: fadeIn 1.2s ease-in;
+}
+
+/* Navigation */
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.main-nav a:hover {
+    background: var(--hover-color);
+    color: var(--text-dark);
+    border-radius: 15px;
+}
+
+/* Hamburger Menu for Small Screens */
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--text-light);
+    transition: 0.3s ease-in-out;
+}
+
+.menu-toggle:hover {
+    color: var(--hover-color);
+}
+
+.menu-toggle span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: var(--text-light);
+    margin: 6px auto;
+    transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+
+/* When Menu is Active (X Close Animation) */
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+/* MEDIA QUERIES */
+/* Mobile screens: max-width 768px */
+@media (max-width: 768px) {
+    .main-header {
+        padding: 1rem;
+    }
+
+    .logo {
+        width: 60px;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+        cursor: pointer;
+    }
+
+    .main-nav ul {
+        display: none;
+        position: absolute;
+        right: 0;
+        background: rgba(21, 34, 56, 1);
+        flex-direction: column;
+        width: 150px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+        top: 60px;
+        animation: slideIn 0.6s ease-in;
+    }
+
+    .main-nav.active ul {
+        display: flex;
+        /* Make it visible when active */
+    }
+
+    .main-nav a {
+        display: block;
+        padding: 5px;
+        color: var(--text-light);
+        font-size: 0.8rem;
+        text-decoration: none;
+    }
+
+    .main-nav a:hover {
+        background: var(--hover-color);
+        color: var(--text-dark);
+    }
+}
+
+
+/* Attribution Page */
+.attribution-page {
+    background: var(--light-bg);
+    color: var(--text-dark);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+/* Hero Banner */
+.attribution-hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color:  #FFFFFF;
+    padding: 6rem 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    animation: fadeInHero 1s ease-in-out;
+}
+
+.attribution-hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.attribution-hero p {
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Attribution Section */
+.attribution-section {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: var(--light-bg);
+    box-shadow: #222 0px 0px 20px 0px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.attribution-section p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.attribution-section p a {
+    color: rgb(7, 83, 83);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.attribution-section p a:hover {
+    text-decoration: underline;
+}
+
+.attribution-section h2 {
+    font-size: 2rem;
+    color: rgb(20, 80, 20);
+    margin-bottom: 1rem;
+}
+
+.attribution-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.attribution-section ul li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.attribution-section ul li a {
+    color: rgb(7, 83, 83);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.attribution-section ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeInHero {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .attribution-page {
+        padding: 3rem 1rem;
+    }
+
+    .attribution-hero {
+        padding: 4rem 1rem;
+    }
+
+    .attribution-section {
+        padding: 1.5rem;
+    }
+
+    .attribution-section h2 {
+        font-size: 1.7rem;
+    }
+
+    .attribution-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .attribution-hero p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Footer */
+.main-footer {
+    background: #152238;
+    /* Matching deep navy */
+    color: var(--text-light);
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-links a {
+    color: var(--text-light);
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--hover-color);
+}
+
+.footer-links i {
+    font-size: 1.5rem;
+}
+
+.footer-contact a {
+    color: var(--secondary-color)
+}
+
+.footer-contact a:hover {
+    color: var(--accent-color)
+}
