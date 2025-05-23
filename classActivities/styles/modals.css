@@ -8,6 +8,10 @@
   --color-heading-bg: #328ec8;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Montserrat" sans-serif;
   margin: 0;
@@ -206,4 +210,68 @@ footer {
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   z-index: 1000;
+}
+
+/* ✅ Small screens: Mobile (320px - 480px) */
+@media screen and (max-width: 320px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .content img {
+    max-width: 100%;
+  }
+
+  #clock {
+    font-size: 16px;
+    bottom: 10px;
+    right: 10px;
+  }
+}
+
+/* ✅ Medium screens: Tablets (481px - 768px) */
+@media screen and (max-width: 481px) {
+  header img {
+    width: 60px;
+  }
+
+  .card {
+    grid-template-columns: 1fr;
+  }
+
+  .content img {
+    max-width: 100px;
+  }
+
+  #clock {
+    font-size: 18px;
+  }
+}
+
+/* ✅ Large screens: Laptops & desktops (769px and above) */
+@media screen and (max-width: 760px) {
+  .card {
+    grid-template-columns: 2fr 3fr;
+  }
+
+  #clock {
+    font-size: 20px;
+  }
 }
