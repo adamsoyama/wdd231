@@ -1,88 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WDD 231 - Course Homepage</title>
-    <meta name="description" content="WDD 231 - Chamber of commerce portfolio homepage">
-    <meta name="author" content="Adams Oyama">
-    <meta property="og:title" content="WDD 231 - Course Homepage">
-    <meta property="og:type" content="article">
-    <meta property="og:image"
-        content="https://img.freepik.com/free-photo/html-css-collage-concept-with-person_23-2150061972.jpg?t=st=1742238315~exp=1742241915~hmac=35147e2b5e1e8d8168c732bdd84b91a5c4b590eea179fc5c7ff90bedcbd8476e&w=1380">
-    <meta property="og:url" content="https://adamsoyama.github.io/wdd231/index.html">
-    <meta property="og:description" content="WDD 231 - Chamber of commerce portfolio homepage">
-    <link rel="canonical" href="https://adamsoyama.github.io/wdd231/index.html">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <meta
+      name="description"
+      content="WDD 231 - Chamber of commerce portfolio homepage"
+    />
+    <meta name="author" content="Adams Oyama" />
+    <meta property="og:title" content="WDD 231 - Course Homepage" />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:image"
+      content="https://img.freepik.com/free-photo/html-css-collage-concept-with-person_23-2150061972.jpg?t=st=1742238315~exp=1742241915~hmac=35147e2b5e1e8d8168c732bdd84b91a5c4b590eea179fc5c7ff90bedcbd8476e&w=1380"
+    />
+    <meta
+      property="og:url"
+      content="https://adamsoyama.github.io/wdd231/index.html"
+    />
+    <meta
+      property="og:description"
+      content="WDD 231 - Chamber of commerce portfolio homepage"
+    />
     <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&display=swap"
-        rel="stylesheet">
-    <link rel="icon" href="favicon-a.ico">
-    <link rel="stylesheet" href="styles/index.css">
+      rel="canonical"
+      href="https://adamsoyama.github.io/wdd231/index.html"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="favicon-a.ico" />
+    <link rel="stylesheet" href="styles/index.css" />
     <script src="scripts/index.js" defer></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <img src="images/profile.jpg" alt="Adams Oyama" width="70" loading="lazy">
-        <h1>Adams Oyama</h1>
-        <div class="menu-toggle">&#9776;</div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="chamber.html">Chamber</a></li>
-                <li><a href="https://github.com/adamsoyama">Github Profile</a></li>
-                <li><a href="https://www.linkedin.com/in/adams-oyama/">LinkedIn</a></li>
-            </ul>
-        </nav>
+      <img
+        src="images/profile.jpg"
+        alt="Adams Oyama"
+        width="70"
+        loading="lazy"
+      />
+      <h1>Adams Oyama</h1>
+      <div class="menu-toggle">&#9776;</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="chamber.html">Chamber</a></li>
+          <li><a href="https://github.com/adamsoyama">Github Profile</a></li>
+          <li>
+            <a href="https://www.linkedin.com/in/adams-oyama/">LinkedIn</a>
+          </li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <h1>WDD 231 - Homepage</h1>
-        <div class="grid-container">
-            <section>
-                <h2>Course Work</h2>
-                <ul>
-                    <li>CSE 110 - Introduction to Programming</li>
-                    <li>CSE 111 - Programming with Functions</li>
-                    <li>WDD 130 - Web Fundamentals</li>
-                    <li>CSE 210 - Programming with Classes</li>
-                    <li>WDD 131 - Dynamic Web Fundamentals</li>
-                    <li>WDD 231 - Web Frontend Development I</li>
-                </ul>
-            </section>
-            <section>
-                <h2>Abuja, Nigeria</h2>
-                <figure>
-                    <img src="images/nigeria-culture.jpg" alt="Nigerian Culture and Festival" width="400"
-                        loading="lazy">
-                    <figcaption>Nigerian Culture and Festival</figcaption>
-                </figure>
-            </section>
-        </div>
+      <h1>WDD 231 - Homepage</h1>
+      <div class="grid-container">
         <section>
-            <h2>Web and Computer Programming Certificate</h2>
-            <div class="button-container">
-                <button onclick="filterCourses('all')">ALL</button>
-                <button onclick="filterCourses('CSE')">CSE</button>
-                <button onclick="filterCourses('WDD')">WDD</button>
-            </div>
-            <div id="courses">
-                <div class="course">CSE 110 - Introduction to Programming</div>
-                <div class="course">WDD 130 - Web Fundamentals</div>
-                <div class="course">CSE 111 - Programming with Functions</div>
-                <div class="course">CSE 210 - Programming with Classes</div>
-                <div class="course">WDD 131 - Dynamic Web Fundamentals</div>
-                <div class="course">WDD 231 - Web Frontend Development I</div>
-            </div>
+          <h2>Course Work</h2>
+          <ul>
+            <li>CSE 110 - Introduction to Programming</li>
+            <li>CSE 111 - Programming with Functions</li>
+            <li>WDD 130 - Web Fundamentals</li>
+            <li>CSE 210 - Programming with Classes</li>
+            <li>WDD 131 - Dynamic Web Fundamentals</li>
+            <li>WDD 231 - Web Frontend Development I</li>
+          </ul>
         </section>
+        <section>
+          <h2>Abuja, Nigeria</h2>
+          <figure>
+            <img
+              src="images/nigeria-culture.jpg"
+              alt="Nigerian Culture and Festival"
+              width="400"
+              loading="lazy"
+            />
+            <figcaption>Nigerian Culture and Festival</figcaption>
+          </figure>
+        </section>
+      </div>
+      <section>
+        <h2>Web and Computer Programming Certificate</h2>
+        <div class="button-container">
+          <button onclick="filterCourses('all')">ALL</button>
+          <button onclick="filterCourses('CSE')">CSE</button>
+          <button onclick="filterCourses('WDD')">WDD</button>
+        </div>
+        <div id="courses">
+          <div class="course">CSE 110 - Introduction to Programming</div>
+          <div class="course">WDD 130 - Web Fundamentals</div>
+          <div class="course">CSE 111 - Programming with Functions</div>
+          <div class="course">CSE 210 - Programming with Classes</div>
+          <div class="course">WDD 131 - Dynamic Web Fundamentals</div>
+          <div class="course">WDD 231 - Web Frontend Development I</div>
+        </div>
+      </section>
     </main>
     <footer>
-        <p>&copy; <span id="currentyear"></span> &bull; Adams Oyama &bull; Nigeria</p>
-        <p id="lastUpdated"></p>
+      <p>
+        &copy; <span id="currentyear"></span> &bull; Adams Oyama &bull; Nigeria
+      </p>
+      <p id="lastUpdated"></p>
     </footer>
-</body>
-
+  </body>
 </html>

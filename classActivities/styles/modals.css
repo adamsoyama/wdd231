@@ -1,147 +1,209 @@
 :root {
-    --color-dark-blue-bg: #003377;
-    --color-light-grey-bg: #f5f7fa;
-    --color-white: #ffffff;
-    --color-accent: #f68d23;
-    --color-cse: #d9edf7;
-    --color-wdd: #f2dede;
-    --color-heading-bg: #328ec8;
+  --color-dark-blue-bg: #003377;
+  --color-light-grey-bg: #f5f7fa;
+  --color-white: #ffffff;
+  --color-accent: #f68d23;
+  --color-cse: #d9edf7;
+  --color-wdd: #f2dede;
+  --color-heading-bg: #328ec8;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: var(--color-light-grey-bg);
+  font-family: "Montserrat" sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-light-grey-bg);
 }
 
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--color-dark-blue-bg);
-    color: var(--color-white);
-    padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-dark-blue-bg);
+  color: var(--color-white);
+  padding: 1rem 2rem;
 }
 
 header img {
-    width: 70px;
-    border-radius: 15px;
+  width: 70px;
+  border-radius: 15px;
 }
 
 header h1 {
-    font-size: 2rem;
-    flex-grow: 1;
-    text-align: center;
-    margin: 0;
+  font-size: 2rem;
+  flex-grow: 1;
+  text-align: center;
+  margin: 0;
 }
 
 .menu-toggle {
-    display: none;
-    cursor: pointer;
-    font-size: 2rem;
+  display: none;
+  cursor: pointer;
+  font-size: 2rem;
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li a {
-    color: var(--color-white);
-    text-decoration: none;
-    font-weight: bold;
+  color: var(--color-white);
+  text-decoration: none;
+  font-weight: bold;
 }
 
 main {
-    padding: 20px;
+  padding: 20px;
 }
 
-h2 {
-    text-align: center;
-    color: var(--color-dark-blue-bg);
+section {
+  margin-bottom: 20px;
+  background-color: var(--color-white);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  /* Adding shadow for better aesthetics */
+}
+.card {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+  /* Reduced bottom padding */
+  margin-bottom: 20px;
+  background-color: var(--color-white);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  /* Adding shadow for better aesthetics */
+}
+
+.card-header {
+  border: #f68d23 2px solid;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.content {
+  display: flex;
+  align-items: flex-start; /* Aligns items at the top */
+  gap: 20px; /* Adds spacing */
+  flex-wrap: wrap; /* Allows the text to flow below if necessary */
+}
+
+.content img {
+  max-width: 190px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.content p {
+  flex: 1; /* Ensures text takes available space */
+  min-width: 50%; /* Prevents text from squeezing too much */
+}
+
+h2,
+h3 {
+  text-align: center;
+  color: var(--color-dark-blue-bg);
 }
 
 .button-container {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
 }
 
 button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--color-accent);
-    color: var(--color-white);
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: var(--color-heading-bg);
+  background-color: var(--color-heading-bg);
 }
 
 #courses {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
 }
 
 .course {
-    padding: 15px;
-    border-radius: 5px;
-    width: 220px;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    cursor: pointer;
+  padding: 15px;
+  border-radius: 5px;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 .course.cse {
-    background-color: var(--color-cse);
+  background-color: var(--color-cse);
 }
 
 .course.wdd {
-    background-color: var(--color-wdd);
+  background-color: var(--color-wdd);
 }
 
 footer {
-    background-color: var(--color-dark-blue-bg);
-    color: var(--color-white);
-    text-align: center;
-    padding: 1rem;
+  background-color: var(--color-dark-blue-bg);
+  color: var(--color-white);
+  text-align: center;
+  padding: 1rem;
 }
 
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    justify-content: center;
-    align-items: center;
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-content {
-    background-color: var(--color-white);
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 400px;
-    text-align: center;
-    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  background-color: var(--color-white);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
 .close-btn {
-    float: right;
-    font-size: 1.5rem;
-    font-weight: bold;
-    cursor: pointer;
+  float: right;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#clock {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: var(--color-dark-blue-bg);
+  color: var(--color-white);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
 }

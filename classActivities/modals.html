@@ -1,53 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Course Catalog</title>
-    <link rel="stylesheet" href="styles/modals.css">
+    <link rel="stylesheet" href="styles/modals.css" />
     <script src="scripts/modals.js" defer></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <img src="images/profile.jpg" alt="Logo" />
-        <h1>My Course Catalog</h1>
-        <div class="menu-toggle">☰</div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Courses</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+      <img
+        src="images/profile.jpg"
+        alt="Adams Oyama"
+        width="70"
+        loading="lazy"
+      />
+      <h1>Course Catalogue</h1>
+      <div class="menu-toggle">&#9776;</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="chamber.html">Chamber</a></li>
+          <li><a href="https://github.com/adamsoyama">Github Profile</a></li>
+          <li>
+            <a href="https://www.linkedin.com/in/adams-oyama/">LinkedIn</a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <main>
-        <h2>Available Courses</h2>
+      <h2>Welcome to My Course Catalog</h2>
+      <section class="card">
+        <div class="card-header">
+          <h3>About Me</h3>
+          <div class="content">
+            <img src="images/pic.jpg" alt="Adams Oyama" />
+            <p>
+              My name is Adams Oyama. I am currently studying WDD 131: Dynamic
+              Web Fundamentals. I live in Calabar, Cross River State, Nigeria. I
+              have a passion for web development and enjoy creating interactive
+              and visually appealing websites. I believe in continuous learning
+              and love exploring new technologies and techniques in web design.
+              In my free time, I enjoy exploring the cultural heritage and
+              natural beauty of Calabar, immersing myself in the rich traditions
+              and modern developments of Nigeria. I also stay active in various
+              tech communities, continuously enhancing my skills and
+              collaborating with like-minded individuals.
+            </p>
+          </div>
+        </div>
+        <div class="card-header">
+          <h3>Calabar, Nigeria</h3>
+          <div class="content">
+            <img src="images/carnival-main.jpg" alt="Nigeria Picture" />
+            <p>
+              Nigeria, known as the "Giant of Africa," is the most populous
+              country on the continent, with over 200 million people. It is a
+              diverse nation with more than 250 ethnic groups and a rich
+              cultural heritage. From the bustling city of Lagos to the serene
+              landscapes of the Niger Delta, Nigeria is a land of contrasts and
+              opportunities.
+            </p>
+            <p>
+              Nigerians are known for their resilience, creativity, and vibrant
+              spirit. The country has a thriving arts scene, with Nollywood
+              being one of the largest film industries in the world. Nigerian
+              music, particularly Afrobeat, has gained international acclaim.
+              The people are also passionate about sports, especially football
+              (soccer), and the national team, the Super Eagles, has a large
+              following.
+            </p>
+            <p>
+              Nigeria's economy is one of the largest in Africa, driven by oil
+              and gas production, agriculture, and a growing tech industry. The
+              country is home to many startups and innovation hubs, making it a
+              hotspot for tech enthusiasts and entrepreneurs.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h3>Web and Computer Programming</h3>
 
         <div class="button-container">
-            <button>All</button>
-            <button>CSE</button>
-            <button>WDD</button>
+          <button>All</button>
+          <button>CSE</button>
+          <button>WDD</button>
         </div>
 
         <div id="courses"></div>
+      </section>
+      <div id="clock"></div>
+      <!-- Fixed Clock Display -->
     </main>
 
     <footer>
-        <p id="currentyear"></p>
-        <p id="lastUpdated"></p>
+      <p>
+        &copy; <span id="currentyear"></span> &bull; Adams Oyama &bull; Nigeria
+      </p>
+      <p id="lastUpdated"></p>
     </footer>
 
     <!-- Modal -->
     <div id="courseModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h2 id="courseTitle">Course Title</h2>
-            <p id="courseDescription">Course description goes here.</p>
-        </div>
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2 id="courseTitle">Course Title</h2>
+        <p id="courseDescription">Course description goes here.</p>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>
